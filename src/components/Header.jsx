@@ -431,7 +431,7 @@ function Header() {
                 </div>
                 <div className={`submenu ${activeMenu === "mechanical" ? "open" : ""}`}>
                   <a>Electrical Supply</a>
-                  ,<a>Spare Parts</a>
+                  <a>Spare Parts</a>
                   <a>Tyre</a>
                   <a>Battery</a>
                   </div>
