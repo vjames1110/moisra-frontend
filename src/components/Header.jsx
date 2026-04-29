@@ -1,0 +1,452 @@
+import { useState } from "react";
+
+function Header() {
+  const [show, setShow] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+
+  return (
+    <>
+      <header className="header">
+        <div className="logo">MOISRA</div>
+
+        <nav>
+          <a>Home</a>
+          <a>About</a>
+
+          <div
+            className="servicesTrigger"
+            onMouseEnter={() => setShow(true)}
+            onMouseLeave={() => setShow(false)}
+          >
+            Services
+          </div>
+
+          <a>Clients</a>
+          <a>Contact</a>
+        </nav>
+      </header>
+
+      <div
+        className={`megaMenu ${show ? "show" : ""}`}
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}
+      >
+        <div className="megaContent">
+
+          {/* IT Solutions */}
+          <div className="column">
+            <h4>IT Solutions</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "it-dev" ? null : "it-dev")}
+                >
+                  Development
+                </div>
+                <div className={`submenu ${activeMenu === "it-dev" ? "open" : ""}`}>
+                  <a>Web Development</a>
+                  <a>App Development</a>
+                  <a>Software Development</a>
+                  <a>ERP Development</a>
+                  <a>HR & Administration IT Solutions</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "it-erp" ? null : "it-erp")}
+                >
+                  ERP Solutions
+                </div>
+                <div className={`submenu ${activeMenu === "it-erp" ? "open" : ""}`}>
+                  <a>SAP</a>
+                  <a>Talley ERP</a>
+                  <a>ERP</a>
+                  <a>ERP Training</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "it-planning" ? null : "it-planning")}
+                >
+                  Planning & Strategy
+                </div>
+                <div className={`submenu ${activeMenu === "it-planning" ? "open" : ""}`}>
+                  <a>Primavera</a>
+                  <a>MSP</a>
+                  <a>PROCORE</a>
+                  <a>Weighbridge Callibration</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "it-design" ? null : "it-design")}
+                >
+                  3D Designing
+                </div>
+                <div className={`submenu ${activeMenu === "it-design" ? "open" : ""}`}>
+                  <a>AutoCAD</a>
+                  <a>BIM360</a>
+                  <a>Staad</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "it-analytics" ? null : "it-analytics")}
+                >
+                  Performance Analytics
+                </div>
+                <div className={`submenu ${activeMenu === "it-analytics" ? "open" : ""}`}>
+                  <a>Data Analytics</a>
+                  <a>Business Analytics</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Workforce Solutions */}
+          <div className="column">
+            <h4>Workforce Solutions</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "work-manpower" ? null : "work-manpower")}
+                >
+                  Manpower Supply
+                </div>
+                <div className={`submenu ${activeMenu === "work-manpower" ? "open" : ""}`}>
+                  <a>Skilled Labour</a>
+                  <a>Unskilled Labour</a>
+                  <a>Contract Staffing</a>
+                  <a>Permanent Staffing</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "work-training" ? null : "work-training")}
+                >
+                  Training Programs
+                </div>
+                <div className={`submenu ${activeMenu === "work-training" ? "open" : ""}`}>
+                  <a>Technical Training</a>
+                  <a>Safety Training</a>
+                  <a>Industrial Training</a>
+                  <a>Executive Development</a>
+                  <a>Soft Skills Training</a>
+                  <a>HR & Administration Training</a>
+                  <a>Leadership Development</a>
+                  <a>Project Management Training</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "job-placement" ? null : "job-placement")}
+                >
+                  Job Placement
+                </div>
+                <div className={`submenu ${activeMenu === "job-placement" ? "open" : ""}`}>
+                  <a>Placement</a>
+                  <a>Campus Recruitment</a>
+                  <a>Resume Building</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Machinery & Equipment */}
+
+          <div className="column">
+            <h4>Machinery & Equipment</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "machinery-maintenance" ? null : "machinery-maintenance")}
+                >
+                  Machinery Maintenance
+                </div>
+                <div className={`submenu ${activeMenu === "machinery-maintenance" ? "open" : ""}`}>
+                  <a>HMV Maintenance</a>
+                  <a>LMV Maintenance</a>
+                  <a>Plant & Crusher Maintenance</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "machine-rental" ? null : "machine-rental")}
+                >
+                  Machine Rental
+                </div>
+                <div className={`submenu ${activeMenu === "machine-rental" ? "open" : ""}`}>
+                  <a>HMV Rental</a>
+                  <a>LMV Rental</a>
+                  <a>Plant & Crusher Rental</a>
+                  <a>Equipment Rental</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "machine-sales" ? null : "machine-sales")}
+                >
+                  Machine Sales & Purchase
+                </div>
+                <div className={`submenu ${activeMenu === "machine-sales" ? "open" : ""}`}>
+                  <a>Old Machine Sales</a>
+                  <a>Old Machine Purchase</a>
+                  <a>New Machine Purchase</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Civil & Construction */}
+
+          <div className="column">
+            <h4>Civil & Construction</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "subcontracting" ? null : "subcontracting")}
+                >
+                  Sub Contracting
+                </div>
+                <div className={`submenu ${activeMenu === "subcontracting" ? "open" : ""}`}>
+                  <a>B2B</a>
+                  <a>B2C</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "civil-construction" ? null : "civil-construction")}
+                >
+                  Construction Work
+                </div>
+                <div className={`submenu ${activeMenu === "civil-construction" ? "open" : ""}`}>
+                  <a>Building Construction</a>
+                  <a>Civil Construction</a>
+                  <a>Road Construction</a>
+                  <a>Bridge Construction</a>
+                  <a>Industrial Construction</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "miscellaneous" ? null : "miscellaneous")}
+                >
+                  Miscellaneous Work
+                </div>
+                <div className={`submenu ${activeMenu === "miscellaneous" ? "open" : ""}`}>
+                  <a>Bitumin Work</a>
+                  <a>Curshing & Screening</a>
+                  <a>Earth Work</a>
+                  <a>Electrical Work</a>
+                  <a>Fabrication Work</a>
+                  <a>Interior Work</a>
+                  <a>Plumbing Work</a>
+                  <a>Road Marking</a>
+                  <a>P-Way Work</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="column">
+            <h4>Finance</h4>
+            <a>Business Loan</a>
+            <a>Project Funding</a>
+            <a>Insurance</a>
+          </div>
+
+          <div className="column">
+            <h4>Accounts</h4>
+            <a>Taxation Services</a>
+            <a>Accounting</a>
+            <a>Compliance</a>
+          </div>
+
+          
+
+          <div className="column">
+            <h4>Transportation & Logistics</h4>
+            <a>Freight Forwarding</a>
+            <a>Supply Chain Management</a>
+          </div>
+
+          <div className="column">
+            <h4>Industrial Supplies</h4>
+            <a>Raw Material Supply</a>
+            <a>Equipment Supply</a>
+          </div>
+
+        </div>
+      </div>
+
+      <style jsx>{`
+        .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 70px;
+          background: #0B1C3D;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 60px;
+          color: white;
+          z-index: 1000;
+        }
+
+        .logo {
+          font-size: 22px;
+          font-weight: 700;
+        }
+
+        nav {
+          display: flex;
+          gap: 40px;
+        }
+
+        nav a,
+        span {
+          cursor: pointer;
+        }
+
+        /* MEGA MENU */
+
+        .megaMenu {
+          position: fixed;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background: white;
+          box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-10px);
+          transition: all .25s ease;
+          z-index: 999;
+        }
+          .megaMenu::before{
+            content:"";
+            position:absolute;
+            top:-20px;
+            left:0;
+            width:100%;
+            height:20px;
+            background:transparent;
+        }
+
+        .megaMenu.show {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .megaContent {
+          max-width: 1400px;
+          margin: auto;
+          padding: 40px 60px;
+
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 40px;
+        }
+
+        .column h4 {
+          margin-bottom: 12px;
+          color: #0B1C3D;
+        }
+
+        .column a {
+          display: block;
+          margin: 8px 0;
+          color: #444;
+          font-size: 14px;
+          cursor: pointer;
+        }
+
+        .column a:hover {
+          color: #F59E0B;
+        }
+
+        /* responsive */
+
+        @media(max-width:1100px){
+          .megaContent{
+            grid-template-columns:repeat(3,1fr);
+          }
+        }
+
+        @media(max-width:700px){
+          .megaContent{
+            grid-template-columns:repeat(2,1fr);
+            padding:30px 20px;
+          }
+        }
+        
+        .accordion {
+display:flex;
+flex-direction:column;
+}
+
+.parent{
+cursor:pointer;
+padding:6px 0;
+font-size:14px;
+color:#333;
+}
+
+.parent:hover{
+color:#F59E0B;
+}
+
+.submenu{
+max-height:0;
+overflow:hidden;
+transition:all .3s ease;
+padding-left:15px;
+}
+
+.submenu.open{
+max-height:200px;
+margin-bottom:8px;
+}
+
+.submenu a{
+display:block;
+font-size:13px;
+color:#666;
+padding:4px 0;
+cursor:pointer;
+}
+
+.submenu a:hover{
+color:#F59E0B;
+}
+
+      `}</style>
+
+    </>
+
+  );
+}
+
+export default Header;
