@@ -306,31 +306,138 @@ function Header() {
             </div>
           </div>
 
+          {/* Finance & Insurance */}
 
           <div className="column">
-            <h4>Finance</h4>
-            <a>Business Loan</a>
-            <a>Project Funding</a>
-            <a>Insurance</a>
+            <h4>Finance & Insurance</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "finance" ? null : "finance")}
+                >
+                  Finance
+                </div>
+                <div className={`submenu ${activeMenu === "finance" ? "open" : ""}`}>
+                  <a>Business Loan</a>
+                  <a>Project Funding</a>
+                  <a>Bank Guarantee - BG</a>
+                  <a>Credit Limit - CC</a>
+                  <a>Equipment Loan</a>
+                  <a>Capital Loan</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "insurance" ? null : "insurance")}
+                >
+                  Insurance
+                </div>
+                <div className={`submenu ${activeMenu === "insurance" ? "open" : ""}`}>
+                  <a>Vehicle Insurance</a>
+                  <a>Health Insurance</a>
+                  <a>WC Policy</a>
+                  <a>Term Insurance</a>
+                  <a>CAR Policy</a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Accounting */}
 
           <div className="column">
-            <h4>Accounts</h4>
-            <a>Taxation Services</a>
-            <a>Accounting</a>
-            <a>Compliance</a>
+            <h4>Accounts & Taxation Services</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "accounts" ? null : "accounts")}
+                >
+                  Accounts
+                </div>
+                <div className={`submenu ${activeMenu === "accounts" ? "open" : ""}`}>
+                  <a>Accounting</a>
+                  <a>Book Keeping</a>
+                  <a>Audit</a>
+                  <a>Financial Reporting</a>
+                  <a>Payroll Management</a>
+                  <a>Compliance Management</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "taxation" ? null : "taxation")}
+                >
+                  Taxation & Compliances
+                </div>
+                <div className={`submenu ${activeMenu === "taxation" ? "open" : ""}`}>
+                  <a>Goods & Service Tax - GST</a>
+                  <a>TDS</a>
+                  <a>PF</a>
+                  <a>ESIC</a>
+                  <a>Professional Tax</a>
+                  <a>ROC Filing</a>
+                </div>
+              </div>
+            </div>
           </div>
 
-
-
-
+          {/* Industrial Supplies */}
 
           <div className="column">
             <h4>Industrial Supplies</h4>
-            <a>Raw Material Supply</a>
-            <a>Equipment Supply</a>
-          </div>
 
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "aggregate" ? null : "aggregate")}
+                >
+                  Aggregate Supply
+                </div>
+                <div className={`submenu ${activeMenu === "aggregate" ? "open" : ""}`}>
+                  <a>Sand Supply</a>
+                  <a>Aggregate</a>
+                  <a>Cement</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "consumables" ? null : "consumables")}
+                >
+                  Consumables Supply
+                </div>
+                <div className={`submenu ${activeMenu === "consumables" ? "open" : ""}`}>
+                  <a>TMT</a>
+                  <a>Structural Steel</a>
+                  <a>Girder</a>
+                  <a>Chemical</a>
+                  <a>Bitumin</a>
+                  <a>Concrete</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "mechanical" ? null : "mechanical")}
+                  >
+                  Mechanical Supply
+                </div>
+                <div className={`submenu ${activeMenu === "mechanical" ? "open" : ""}`}>
+                  <a>Electrical Supply</a>
+                  ,<a>Spare Parts</a>
+                  <a>Tyre</a>
+                  <a>Battery</a>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
