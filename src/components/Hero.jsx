@@ -3,7 +3,7 @@ function Hero() {
     <>
       <section className="hero">
         <div className="content">
-          <h1>MOISRA CONSULTANCY</h1>
+          <h1>MOISRA</h1>
           <p>Engineering Growth. Delivering Solutions.</p>
 
           <div className="buttons">
