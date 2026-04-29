@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import servicesData from "../data/servicesData";
 
 function Header() {
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
 
@@ -46,7 +49,13 @@ function Header() {
                   Development
                 </div>
                 <div className={`submenu ${activeMenu === "it-dev" ? "open" : ""}`}>
-                  <a>Web Development</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "development"}
+                      })
+                    }>
+                      Web Development</a>
                   <a>App Development</a>
                   <a>Software Development</a>
                   <a>ERP Development</a>
