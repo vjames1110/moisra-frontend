@@ -266,6 +266,47 @@ function Header() {
             </div>
           </div>
 
+          {/* Transportation & Logistics */}
+
+          <div className="column">
+            <h4>Transportation & Logistics Solutions</h4>
+
+            <div className="accordion">
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "logistics" ? null : "logistics")}
+                >
+                  Logistics
+                </div>
+                <div className={`submenu ${activeMenu === "logistics" ? "open" : ""}`}>
+                  <a>Shifting</a>
+                  <a>Transportation</a>
+                  <a>Point to Point</a>
+                  <a>Weight Wise</a>
+                  <a>Container Transport</a>
+                  <a>Rack Loading</a>
+                </div>
+              </div>
+              <div className="item">
+                <div
+                  className="parent"
+                  onClick={() => setActiveMenu(activeMenu === "scm" ? null : "scm")}
+                >
+                  Supply Chain Management
+                </div>
+                <div className={`submenu ${activeMenu === "scm" ? "open" : ""}`}>
+                  <a>Logistics Management</a>
+                  <a>GPS Tracking</a>
+                  <a>Inventory Management</a>
+                  <a>Warehouse Management</a>
+                  <a>Distribution Management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
           <div className="column">
             <h4>Finance</h4>
             <a>Business Loan</a>
@@ -280,13 +321,9 @@ function Header() {
             <a>Compliance</a>
           </div>
 
-          
 
-          <div className="column">
-            <h4>Transportation & Logistics</h4>
-            <a>Freight Forwarding</a>
-            <a>Supply Chain Management</a>
-          </div>
+
+
 
           <div className="column">
             <h4>Industrial Supplies</h4>
