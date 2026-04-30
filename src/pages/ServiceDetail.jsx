@@ -47,7 +47,7 @@ function ServiceDetail() {
           </p>
         </section>
 
-        {/* CARDS */}
+        {/* CARDS
         <section className="grid">
           {service.sections.map((section) => (
             <div key={section.id} className="card">
@@ -59,7 +59,7 @@ function ServiceDetail() {
               </ul>
             </div>
           ))}
-        </section>
+        </section> */}
 
         {/* DETAILS */}
         <section className="details">

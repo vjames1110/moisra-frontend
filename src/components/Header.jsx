@@ -56,10 +56,42 @@ function Header() {
                       })
                     }>
                       Web Development</a>
-                  <a>App Development</a>
-                  <a>Software Development</a>
-                  <a>ERP Development</a>
-                  <a>HR & Administration IT Solutions</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "development"}
+                      })
+                    }
+                  >
+                    App Development
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "development"}
+                      })
+                    }
+                  >
+                    Software Development
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "development"}
+                      })
+                    }
+                  >
+                    ERP Development
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "development"}
+                      })
+                    }
+                  >
+                    HR & Administration IT Solutions
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -70,10 +102,42 @@ function Header() {
                   ERP Solutions
                 </div>
                 <div className={`submenu ${activeMenu === "it-erp" ? "open" : ""}`}>
-                  <a>SAP</a>
-                  <a>Talley ERP</a>
-                  <a>ERP</a>
-                  <a>ERP Training</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "erp-solutions"}
+                      })
+                    }
+                  >
+                    SAP
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "erp-solutions"}
+                      })
+                    }
+                  >
+                    Talley ERP
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "erp-solutions"}
+                      })
+                    }
+                  >
+                    ERP
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "erp-solutions"}
+                      })
+                    }
+                  >
+                    ERP Training
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -84,10 +148,42 @@ function Header() {
                   Planning & Strategy
                 </div>
                 <div className={`submenu ${activeMenu === "it-planning" ? "open" : ""}`}>
-                  <a>Primavera</a>
-                  <a>MSP</a>
-                  <a>PROCORE</a>
-                  <a>Weighbridge Callibration</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "planning-strategy"}
+                      })
+                    }
+                  >
+                    Primavera
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "planning-strategy"}
+                      })
+                    }
+                  >
+                    MSP
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "planning-strategy"}
+                      })
+                    }
+                  >
+                    PROCORE
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "planning-strategy"}
+                      })
+                    }
+                  >
+                    Weighbridge Callibration
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -98,9 +194,33 @@ function Header() {
                   3D Designing
                 </div>
                 <div className={`submenu ${activeMenu === "it-design" ? "open" : ""}`}>
-                  <a>AutoCAD</a>
-                  <a>BIM360</a>
-                  <a>Staad</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "3d-design"}
+                      })
+                    }
+                  >
+                    AutoCAD
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "3d-design"}
+                      })
+                    }
+                  >
+                    BIM360
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "3d-design"}
+                      })
+                    }
+                  >
+                    Staad
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -111,8 +231,24 @@ function Header() {
                   Performance Analytics
                 </div>
                 <div className={`submenu ${activeMenu === "it-analytics" ? "open" : ""}`}>
-                  <a>Data Analytics</a>
-                  <a>Business Analytics</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "performance-analytics"}
+                      })
+                    }
+                  >
+                    Data Analytics
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/it-solutions", {
+                        state: { scrollTo: "performance-analytics"}
+                      })
+                    }
+                  >
+                    Business Analytics
+                  </a>
                 </div>
               </div>
             </div>
