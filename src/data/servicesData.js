@@ -1,9 +1,18 @@
+// import { FaLaptopCode } from "react-icons/fa";
+// import { FaUsers } from "react-icons/fa";
+// import { FaTruck } from "react-icons/fa";
+// import { FaHardHat } from "react-icons/fa";
+// import { FaMoneyBillWave } from "react-icons/fa";
+// import { FaFileInvoiceDollar } from "react-icons/fa";
+// import { FaIndustry } from "react-icons/fa";
+// import { FaCogs } from "react-icons/fa";
+
 const servicesData = [
     {
         uid: "srv-001",
         id: "it-solutions",
         title: "IT Solutions",
-        icon: "💻",
+        icon: "FaLaptopCode",
         shortDescription: "Comprehensive IT services for industrial and construction sectors.",
         description: "End-to-end IT consultancy and digital transformation services.",
         sections: [
@@ -61,7 +70,7 @@ const servicesData = [
         uid: "srv-002",
         id: "workforce-solutions",
         title: "Workforce Solutions",
-        icon: "👥",
+        icon: "FaUsers",
         shortDescription: "Comprehensive workforce solutions for industrial and construction sectors.",
         description: "Manpower supply, training, and placement services.",
         sections: [
@@ -104,7 +113,7 @@ const servicesData = [
         uid: "srv-003",
         id: "machinery-equipment",
         title: "Machinery & Equipment",
-        icon: "🚜",
+        icon: "FaTruck",
         shortDescription: "Comprehensive machinery and equipment services for industrial and construction sectors.",
         description: "Rental, maintenance and sale of construction machinery.",
         sections: [
@@ -142,7 +151,7 @@ const servicesData = [
         uid: "srv-004",
         id: "civil-construction",
         title: "Civil & Construction",
-        icon: "🏗️",
+        icon: "FaHardHat",
         shortDescription: "Complete civil construction and infrastructure solutions.",
         description: "Complete civil construction and infrastructure solutions.",
         sections: [
@@ -186,7 +195,7 @@ const servicesData = [
         uid: "srv-005",
         id: "transportation-logistics",
         title: "Transportation & Logistics",
-        icon: "🚚",
+        icon: "FaTruck",
         shortDescription: "End-to-end logistics and transport solutions.",
         description: "End-to-end logistics and transport solutions.",
         sections: [
@@ -219,7 +228,7 @@ const servicesData = [
         uid: "srv-006",
         id: "finance-insurance",
         title: "Finance & Insurance",
-        icon: "💰",
+        icon: "FaMoneyBillWave",
         shortDescription: "Business loans, insurance and financial consultancy.",
         description: "Business loans, insurance and financial consultancy.",
         sections: [
@@ -251,7 +260,7 @@ const servicesData = [
     {
         uid: "srv-007",
         id: "accounts-taxation",
-        icon: "📊",
+        icon: "FaFileInvoiceDollar",
         title: "Accounts & Taxation",
         shortDescription: "GST, accounting, auditing and compliance services.",
         description: "GST, accounting, auditing and compliance services.",
@@ -285,7 +294,7 @@ const servicesData = [
     {
         uid: "srv-008",
         id: "industrial-supplies",
-        icon: "📦",
+        icon: "FaIndustry",
         title: "Industrial Supplies",
         shortDescription: "Construction materials and industrial supply chain.",
         description: "Construction materials and industrial supply chain.",

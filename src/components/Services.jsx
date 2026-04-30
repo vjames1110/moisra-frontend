@@ -1,5 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import servicesData from "../data/servicesData";
+import * as FaIcons from "react-icons/fa";
+
+function getIcon(iconName) {
+  const IconComponent = FaIcons[iconName];
+
+  if (!IconComponent) return "⚙️"; // fallback
+
+  return <IconComponent />;
+}
 
 function Services() {
   const navigate = useNavigate();
@@ -13,6 +22,7 @@ function Services() {
     <>
       <section className="services">
         <h2>Our Services</h2>
+        <p>Comprehensive Submission across industries</p>
 
         <div className="grid">
           {sortedServices.map((item) => (
@@ -68,9 +78,12 @@ function Services() {
         }
 
         .icon {
-          font-size: 32px;
+          font-size: 36px;
           margin-bottom: 15px;
-        }
+          color: #F59E0B;
+          display: flex;
+          justify-content: center;
+}
 
         .card h3 {
           margin-bottom: 10px;
@@ -105,28 +118,6 @@ function Services() {
   );
 }
 
-/* ICON MAPPER (SIMPLE + CLEAN) */
-function getIcon(type) {
-  switch (type) {
-    case "it":
-      return "💻";
-    case "workforce":
-      return "👷";
-    case "civil":
-      return "🏗️";
-    case "machinery":
-      return "🚜";
-    case "logistics":
-      return "🚚";
-    case "supplies":
-      return "📦";
-    case "finance":
-      return "💰";
-    case "accounts":
-      return "📊";
-    default:
-      return "⚙️";
-  }
-}
+
 
 export default Services;
