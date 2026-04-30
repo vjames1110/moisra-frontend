@@ -54,6 +54,46 @@ const servicesData = [
             }
         ]
     },
+        {
+        id: "workforce-solutions",
+        title: "Workforce Solutions",
+        description: "Manpower supply, training, and placement services.",
+        sections: [
+            {
+                id: "work-manpower",
+                title: "Manpower Supply",
+                items: [
+                    { name: "Skilled Labour", slug: "skilled-labour" },
+                    { name: "Unskilled Labour", slug: "unskilled-labour" },
+                    { name: "Contract Staffing", slug: "contract-staffing" },
+                    { name: "Permanent Staffing", slug: "permanent-staffing" },
+                ]
+            },
+            {
+                id: "work-training",
+                title: "Training Programs",
+                items: [
+                    { name: "Technical Training", slug: "technical-training" },
+                    { name: "Safety Training", slug: "safety-training" },
+                    { name: "Industrial Training", slug: "industrial-training" },
+                    { name: "Executive Development", slug: "executive-development" },
+                    { name: "Soft Skills Training", slug: "soft-skills-training" },
+                    { name: "HR & Administration Training", slug: "hr-administration-training" },
+                    { name: "Leadership Development", slug: "leadership-development" },
+                    { name: "Project Management Training", slug: "project-management-training" }
+                ]
+            },
+            {
+                id: "job-placement",
+                title: "Job Placement",
+                items: [
+                    { name: "Placement", slug: "placement" },
+                    { name: "Campus Recruitment", slug: "campus-recruitment" },
+                    { name: "Resume Building", slug: "resume-building" },
+                ]
+            },
+        ]
+    },
     {
         id: "workforce-solutions",
         title: "Workforce Solutions",

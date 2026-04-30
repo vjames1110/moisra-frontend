@@ -267,10 +267,42 @@ function Header() {
                   Manpower Supply
                 </div>
                 <div className={`submenu ${activeMenu === "work-manpower" ? "open" : ""}`}>
-                  <a>Skilled Labour</a>
-                  <a>Unskilled Labour</a>
-                  <a>Contract Staffing</a>
-                  <a>Permanent Staffing</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "manpower-supply"}
+                      })
+                    }
+                  >
+                    Skilled Labour
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "manpower-supply"}
+                      })
+                    }
+                  >
+                    Unskilled Labour
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "manpower-supply"}
+                      })
+                    }
+                  >
+                    Contract Staffing
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "manpower-supply"}
+                      })
+                    }
+                  >
+                    Permanent Staffing
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -281,14 +313,78 @@ function Header() {
                   Training Programs
                 </div>
                 <div className={`submenu ${activeMenu === "work-training" ? "open" : ""}`}>
-                  <a>Technical Training</a>
-                  <a>Safety Training</a>
-                  <a>Industrial Training</a>
-                  <a>Executive Development</a>
-                  <a>Soft Skills Training</a>
-                  <a>HR & Administration Training</a>
-                  <a>Leadership Development</a>
-                  <a>Project Management Training</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Technical Training
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Safety Training
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Industrial Training
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Executive Development
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Soft Skills Training
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    HR & Administration Training
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Leadership Development
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "training-programs"}
+                      })
+                    }
+                  >
+                    Project Management Training
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -299,9 +395,33 @@ function Header() {
                   Job Placement
                 </div>
                 <div className={`submenu ${activeMenu === "job-placement" ? "open" : ""}`}>
-                  <a>Placement</a>
-                  <a>Campus Recruitment</a>
-                  <a>Resume Building</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "job-placement"}
+                      })
+                    }
+                  >
+                    Placement
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "job-placement"}
+                      })
+                    }
+                  >
+                    Campus Recruitment
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/workforce-solutions", {
+                        state: { scrollTo: "job-placement"}
+                      })
+                    }
+                  >
+                    Resume Building
+                  </a>
                 </div>
               </div>
             </div>
