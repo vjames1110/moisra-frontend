@@ -170,6 +170,36 @@ const servicesData = [
             },
         ]
     },
+        {
+        id: "transportation-logistics",
+        title: "Transportation & Logistics",
+        description: "End-to-end logistics and transport solutions.",
+        sections: [
+            {
+                id: "logistics",
+                title: "Logistics",
+                items: [
+                    { name: "Shifting", slug: "shifting" },
+                    { name: "Transportation", slug: "transportation" },
+                    { name: "Point to Point", slug: "point-to-point" },
+                    { name: "Weight Wise", slug: "weight-wise" },
+                    { name: "Container Transport", slug: "container-transport" },
+                    { name: "Rack Loading", slug: "rack-loading" },
+                ]
+            },
+            {
+                id: "supply-chain-management",
+                title: "Supply Chain Management",
+                items: [
+                    { name: "Logistics Management", slug: "logistics-management" },
+                    { name: "GPS Tracking", slug: "gps-tracking" },
+                    { name: "Inventory Management", slug: "inventory-management" },
+                    { name: "Warehouse Management", slug: "warehouse-management" },
+                    { name: "Distribution Management", slug: "distribution-management" },
+                ]
+            },
+        ]
+    },
     {
         id: "transportation-logistics",
         title: "Transportation & Logistics",

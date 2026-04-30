@@ -753,12 +753,60 @@ function Header() {
                   Logistics
                 </div>
                 <div className={`submenu ${activeMenu === "logistics" ? "open" : ""}`}>
-                  <a>Shifting</a>
-                  <a>Transportation</a>
-                  <a>Point to Point</a>
-                  <a>Weight Wise</a>
-                  <a>Container Transport</a>
-                  <a>Rack Loading</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Shifting
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Transportation
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Point to Point
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Weight Wise
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Container Transport
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "logistics" }
+                      })
+                    }
+                  >
+                    Rack Loading
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -769,11 +817,51 @@ function Header() {
                   Supply Chain Management
                 </div>
                 <div className={`submenu ${activeMenu === "scm" ? "open" : ""}`}>
-                  <a>Logistics Management</a>
-                  <a>GPS Tracking</a>
-                  <a>Inventory Management</a>
-                  <a>Warehouse Management</a>
-                  <a>Distribution Management</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "scm" }
+                      })
+                    }
+                  >
+                    Logistics Management
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "scm" }
+                      })
+                    }
+                  >
+                    GPS Tracking
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "scm" }
+                      })
+                    }
+                  >
+                    Inventory Management
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "scm" }
+                      })
+                    }
+                  >
+                    Warehouse Management
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/transportation-logistics", {
+                        state: { scrollTo: "scm" }
+                      })
+                    }
+                  >
+                    Distribution Management
+                  </a>
                 </div>
               </div>
             </div>
