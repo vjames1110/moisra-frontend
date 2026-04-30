@@ -441,9 +441,33 @@ function Header() {
                   Machinery Maintenance
                 </div>
                 <div className={`submenu ${activeMenu === "machinery-maintenance" ? "open" : ""}`}>
-                  <a>HMV Maintenance</a>
-                  <a>LMV Maintenance</a>
-                  <a>Plant & Crusher Maintenance</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machinery-maintenance" }
+                      })
+                    }
+                  >
+                    HMV Maintenance
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machinery-maintenance" }
+                      })
+                    }
+                  >
+                    LMV Maintenance
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machinery-maintenance" }
+                      })
+                    }
+                  >
+                    Plant & Crusher Maintenance
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -454,10 +478,42 @@ function Header() {
                   Machine Rental
                 </div>
                 <div className={`submenu ${activeMenu === "machine-rental" ? "open" : ""}`}>
-                  <a>HMV Rental</a>
-                  <a>LMV Rental</a>
-                  <a>Plant & Crusher Rental</a>
-                  <a>Equipment Rental</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-rental" }
+                      })
+                    }
+                  >
+                    HMV Rental
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-rental" }
+                      })
+                    }
+                  >
+                    LMV Rental
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-rental" }
+                      })
+                    }
+                  >
+                    Plant & Crusher Rental
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-rental" }
+                      })
+                    }
+                  >
+                    Equipment Rental
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -468,9 +524,33 @@ function Header() {
                   Machine Sales & Purchase
                 </div>
                 <div className={`submenu ${activeMenu === "machine-sales" ? "open" : ""}`}>
-                  <a>Old Machine Sales</a>
-                  <a>Old Machine Purchase</a>
-                  <a>New Machine Purchase</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-sales" }
+                      })
+                    }
+                  >
+                    Old Machine Sales
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-sales" }
+                      })
+                    }
+                  >
+                    Old Machine Purchase
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/machinery-equipment", {
+                        state: { scrollTo: "machine-sales" }
+                      })
+                    }
+                  >
+                    New Machine Purchase
+                  </a>
                 </div>
               </div>
             </div>

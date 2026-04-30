@@ -94,10 +94,40 @@ const servicesData = [
             },
         ]
     },
-    {
-        id: "workforce-solutions",
-        title: "Workforce Solutions",
-        description: "Manpower supply, training, and placement services.",
+      {
+        id: "machinery-equipment",
+        title: "Machinery & Equipment",
+        description: "Rental, maintenance and sale of construction machinery.",
+        sections: [
+            {
+                id: "machinery-maintenance",
+                title: "Machinery Maintenance",
+                items: [
+                    { name: "HMV Maintenance", slug: "hmV-maintenance" },
+                    { name: "LMV Maintenance", slug: "lmv-maintenance" },
+                    { name: "Plant & Crusher Maintenance", slug: "plant-crusher-maintenance" },
+                ]
+            },
+            {
+                id: "machine-rental",
+                title: "Machine Rental",
+                items: [
+                    { name: "HMV Rental", slug: "hmv-rental" },
+                    { name: "LMV Rental", slug: "lmv-rental" },
+                    { name: "Plant & Crusher Rental", slug: "plant-crusher-rental" },
+                    { name: "Equipment Rental", slug: "equipment-rental" },
+                ]
+            },
+            {
+                id: "machine-sales",
+                title: "Machine Sales & Purchase",
+                items: [
+                    { name: "Old Machine Sales", slug: "old-machine-sales" },
+                    { name: "Old Machine Purchase", slug: "old-machine-purchase" },
+                    { name: "New Machine Purchase", slug: "new-machine-purchase" },
+                ]
+            },
+        ]
     },
     {
         id: "civil-construction",
