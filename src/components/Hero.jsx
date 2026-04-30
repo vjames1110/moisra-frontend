@@ -7,7 +7,8 @@ function Hero() {
           <p>Engineering Growth. Delivering Solutions.</p>
 
           <div className="buttons">
-            <button className="primary">Get Quote</button>
+            <button className="primary"
+            onClick={() => alert("Enquiry Form Coming Soon")}>Get Quote</button>
             <button className="secondary">Our Services</button>
           </div>
         </div>

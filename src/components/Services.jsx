@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import servicesData from "../data/servicesData";
-import Header from "./Header";
 
 function Services() {
   const navigate = useNavigate();
-  
+
+  // SORT SERVICES
+  const sortedServices = [...servicesData].sort(
+    (a, b) => a.order - b.order
+  );
 
   return (
     <>
@@ -12,16 +15,19 @@ function Services() {
         <h2>Our Services</h2>
 
         <div className="grid">
-          {servicesData.map((item) => (
-            <div key={item.id} className="card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+          {sortedServices.map((item) => (
+            <div
+              key={item.id}
+              className="card"
+              onClick={() => navigate(`/services/${item.id}`)}
+            >
+              {/* ICON */}
+              <div className="icon">{getIcon(item.icon)}</div>
 
-              <button
-                onClick={() => navigate(`/services/${item.id}`)}
-              >
-                Learn More
-              </button>
+              <h3>{item.title}</h3>
+              <p>{item.shortDescription}</p>
+
+              <span className="link">Explore →</span>
             </div>
           ))}
         </div>
@@ -35,8 +41,9 @@ function Services() {
 
         h2 {
           text-align: center;
-          margin-bottom: 50px;
-          font-size: 36px;
+          margin-bottom: 60px;
+          font-size: 38px;
+          color: #0B1C3D;
         }
 
         .grid {
@@ -47,23 +54,79 @@ function Services() {
 
         .card {
           background: white;
-          padding: 30px;
-          border-radius: 8px;
-          box-shadow: 0 5px 20px rgba(0,0,0,.05);
+          padding: 35px 25px;
+          border-radius: 12px;
+          box-shadow: 0 10px 30px rgba(0,0,0,.06);
           text-align: center;
+          cursor: pointer;
+          transition: all 0.3s ease;
         }
 
-        .card button {
+        .card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0,0,0,.1);
+        }
+
+        .icon {
+          font-size: 32px;
+          margin-bottom: 15px;
+        }
+
+        .card h3 {
+          margin-bottom: 10px;
+          color: #0B1C3D;
+        }
+
+        .card p {
+          color: #555;
+          font-size: 14px;
+          min-height: 40px;
+        }
+
+        .link {
+          display: inline-block;
           margin-top: 15px;
-          background: #0B1C3D;
-          color: white;
-          border: none;
-          padding: 10px 18px;
-          cursor: pointer;
+          font-size: 14px;
+          color: #F59E0B;
+          font-weight: 500;
+        }
+
+        .card:hover .link {
+          text-decoration: underline;
+        }
+
+        @media(max-width: 900px) {
+          .services {
+            padding: 80px 20px;
+          }
         }
       `}</style>
     </>
   );
+}
+
+/* ICON MAPPER (SIMPLE + CLEAN) */
+function getIcon(type) {
+  switch (type) {
+    case "it":
+      return "💻";
+    case "workforce":
+      return "👷";
+    case "civil":
+      return "🏗️";
+    case "machinery":
+      return "🚜";
+    case "logistics":
+      return "🚚";
+    case "supplies":
+      return "📦";
+    case "finance":
+      return "💰";
+    case "accounts":
+      return "📊";
+    default:
+      return "⚙️";
+  }
 }
 
 export default Services;

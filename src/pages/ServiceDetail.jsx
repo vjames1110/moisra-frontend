@@ -1,10 +1,11 @@
 import { useParams, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import servicesData from "../data/servicesData";
 
 function ServiceDetail() {
   const { id } = useParams();
   const location = useLocation();
+  const [activeSection, setActiveSection] = useState(null);
 
   const service = servicesData.find((s) => s.id === id);
 
@@ -12,18 +13,34 @@ function ServiceDetail() {
     if (location.state?.scrollTo) {
       const el = document.getElementById(location.state.scrollTo);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -80;
+        const y =
+          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   }, [location]);
 
-  if (!service) {
-    return (
-      <div className="not-found">
-        <h2>Service Not Found</h2>
-      </div>
-    );
-  }
+  // 🔥 Track active section while scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      service?.sections.forEach((section) => {
+        const el = document.getElementById(section.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveSection(section.id);
+          }
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [service]);
+
+  if (!service) return <h2>Not Found</h2>;
 
   return (
     <>
@@ -31,157 +48,142 @@ function ServiceDetail() {
 
         {/* HERO */}
         <section className="hero">
-          <div className="overlay">
-            <h1>{service.title}</h1>
-            <p>{service.description}</p>
-          </div>
+          <h1>{service.title}</h1>
+          <p>{service.description}</p>
         </section>
 
         {/* OVERVIEW */}
         <section className="overview">
           <h2>Overview</h2>
           <p>
-            MOISRA delivers professional consultancy services in{" "}
-            <b>{service.title}</b>. We focus on execution excellence,
-            compliance, and scalable solutions for industrial and construction needs.
+            MOISRA delivers high-quality <b>{service.title}</b> services with
+            strong execution, compliance, and scalability.
           </p>
         </section>
 
-        {/* CARDS
-        <section className="grid">
-          {service.sections.map((section) => (
-            <div key={section.id} className="card">
-              <h3>{section.title}</h3>
-              <ul>
-                {section.items.map((item, i) => (
-                  <li key={i}>{item.name}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </section> */}
+        {/* MAIN LAYOUT */}
+        <section className="main">
 
-        {/* DETAILS */}
-        <section className="details">
-          {service.sections.map((section) => (
-            <div key={section.id} id={section.id} className="block">
-              <h2>{section.title}</h2>
-
-              <div className="tags">
-                {section.items.map((item, i) => (
-                  <span key={i}>{item.name}</span>
-                ))}
+          {/* 🔥 SIDE NAV */}
+          <div className="sidebar">
+            {service.sections.map((section) => (
+              <div
+                key={section.id}
+                className={`navItem ${
+                  activeSection === section.id ? "active" : ""
+                }`}
+                onClick={() => {
+                  const el = document.getElementById(section.id);
+                  el.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                {section.title}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* CONTENT */}
+          <div className="content">
+            {service.sections.map((section) => (
+              <div key={section.id} id={section.id} className="block">
+                <h2>{section.title}</h2>
+
+                <div className="tags">
+                  {section.items.map((item, i) => (
+                    <span key={i}>{item.name}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </section>
 
         {/* CTA */}
         <section className="cta">
           <h2>Need Expert Consultation?</h2>
-          <p>Connect with MOISRA for customized business solutions.</p>
-          <button>Get Quote</button>
+          <p>Let's build your business with MOISRA</p>
+          <button onClick={() => alert("Enquiry Form Coming Soon")}>
+            Get Quote
+          </button>
         </section>
 
       </div>
 
-      {/* INLINE STYLES */}
+      {/* STYLES */}
       <style jsx>{`
+
         .service-page {
           font-family: Arial, sans-serif;
         }
 
         /* HERO */
         .hero {
-          height: 320px;
+          height: 300px;
           background: linear-gradient(135deg, #0B1C3D, #1E3A8A);
-          display: flex;
-          align-items: center;
-          justify-content: center;
           color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           text-align: center;
-          padding: 20px;
         }
 
         .hero h1 {
-          font-size: 44px;
-          margin-bottom: 10px;
+          font-size: 42px;
         }
 
-        .hero p {
-          font-size: 18px;
-          opacity: 0.9;
-          max-width: 700px;
-        }
-
-        /* OVERVIEW */
         .overview {
           padding: 60px 20px;
           text-align: center;
           background: #F8FAFC;
         }
 
-        .overview h2 {
-          font-size: 32px;
-          margin-bottom: 15px;
-          color: #0B1C3D;
-        }
-
-        .overview p {
-          max-width: 800px;
-          margin: auto;
-          color: #555;
-          line-height: 1.6;
-        }
-
-        /* GRID */
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-          gap: 25px;
+        /* MAIN */
+        .main {
+          display: flex;
+          gap: 40px;
           padding: 60px;
-          background: white;
         }
 
-        .card {
-          background: #fff;
-          padding: 25px;
-          border-radius: 12px;
-          box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        /* SIDEBAR */
+        .sidebar {
+          width: 250px;
+          position: sticky;
+          top: 100px;
+          height: fit-content;
+        }
+
+        .navItem {
+          padding: 10px;
+          cursor: pointer;
+          border-left: 3px solid transparent;
+          color: #555;
           transition: 0.3s;
         }
 
-        .card:hover {
-          transform: translateY(-6px);
-        }
-
-        .card h3 {
+        .navItem:hover {
           color: #0B1C3D;
-          margin-bottom: 10px;
         }
 
-        .card ul {
-          padding-left: 18px;
+        .navItem.active {
+          color: #0B1C3D;
+          border-left: 3px solid #F59E0B;
+          font-weight: bold;
         }
 
-        .card li {
-          margin-bottom: 6px;
-          color: #555;
-        }
-
-        /* DETAILS */
-        .details {
-          padding: 60px;
-          background: #F8FAFC;
+        /* CONTENT */
+        .content {
+          flex: 1;
         }
 
         .block {
-          margin-bottom: 40px;
+          margin-bottom: 60px;
         }
 
         .block h2 {
-          color: #1E3A8A;
           margin-bottom: 15px;
+          color: #1E3A8A;
         }
 
         .tags {
@@ -192,59 +194,58 @@ function ServiceDetail() {
 
         .tags span {
           background: white;
-          padding: 8px 12px;
+          padding: 10px 14px;
           border-radius: 20px;
           font-size: 13px;
-          box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+          transition: 0.3s;
+        }
+
+        .tags span:hover {
+          transform: translateY(-3px);
         }
 
         /* CTA */
         .cta {
-          padding: 60px;
+          padding: 80px;
           text-align: center;
           background: #0B1C3D;
           color: white;
         }
 
-        .cta h2 {
-          font-size: 28px;
-        }
-
-        .cta p {
-          margin-top: 10px;
-          opacity: 0.9;
-        }
-
         .cta button {
           margin-top: 20px;
-          padding: 12px 22px;
-          border: none;
+          padding: 12px 25px;
           background: #F59E0B;
-          font-weight: bold;
+          border: none;
           cursor: pointer;
           border-radius: 6px;
+          font-weight: bold;
         }
 
-        /* NOT FOUND */
-        .not-found {
-          padding: 120px;
-          text-align: center;
+        /* MOBILE */
+        @media(max-width: 900px) {
+          .main {
+            flex-direction: column;
+          }
+
+          .sidebar {
+            width: 100%;
+            display: flex;
+            overflow-x: auto;
+          }
+
+          .navItem {
+            white-space: nowrap;
+            border: none;
+            border-bottom: 2px solid transparent;
+          }
+
+          .navItem.active {
+            border-bottom: 2px solid #F59E0B;
+          }
         }
 
-        /* RESPONSIVE */
-        @media(max-width: 768px) {
-          .hero h1 {
-            font-size: 32px;
-          }
-
-          .grid {
-            padding: 30px 20px;
-          }
-
-          .details {
-            padding: 30px 20px;
-          }
-        }
       `}</style>
     </>
   );

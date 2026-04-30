@@ -1,7 +1,10 @@
 const servicesData = [
     {
+        uid: "srv-001",
         id: "it-solutions",
         title: "IT Solutions",
+        icon: "💻",
+        shortDescription: "Comprehensive IT services for industrial and construction sectors.",
         description: "End-to-end IT consultancy and digital transformation services.",
         sections: [
             {
@@ -20,7 +23,7 @@ const servicesData = [
                 title: "ERP Solutions",
                 items: [
                     { name: "SAP", slug: "sap" },
-                    { name: "Talley ERP", slug: "talley-erp" },
+                    { name: "Tally ERP", slug: "tally-erp" },
                     { name: "ERP", slug: "erp" },
                     { name: "ERP Training", slug: "erp-training" }
                 ]
@@ -32,7 +35,7 @@ const servicesData = [
                     { name: "Primavera", slug: "primavera" },
                     { name: "MSP", slug: "msp" },
                     { name: "PROCORE", slug: "procore" },
-                    { name: "Weighbridge Callibration", slug: "weighbridge-callibration" },
+                    { name: "Weighbridge Calibration", slug: "weighbridge-calibration" },
                 ]
             },
             {
@@ -40,7 +43,7 @@ const servicesData = [
                 title: "3D Designing",
                 items: [
                     { name: "AutoCAD", slug: "autocad" },
-                    { name: "BIM360", slug: "bim" },
+                    { name: "BIM360", slug: "bim360" },
                     { name: "Staad", slug: "staad" },
                 ]
             },
@@ -55,8 +58,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-002",
         id: "workforce-solutions",
         title: "Workforce Solutions",
+        icon: "👥",
+        shortDescription: "Comprehensive workforce solutions for industrial and construction sectors.",
         description: "Manpower supply, training, and placement services.",
         sections: [
             {
@@ -95,8 +101,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-003",
         id: "machinery-equipment",
         title: "Machinery & Equipment",
+        icon: "🚜",
+        shortDescription: "Comprehensive machinery and equipment services for industrial and construction sectors.",
         description: "Rental, maintenance and sale of construction machinery.",
         sections: [
             {
@@ -130,8 +139,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-004",
         id: "civil-construction",
         title: "Civil & Construction",
+        icon: "🏗️",
+        shortDescription: "Complete civil construction and infrastructure solutions.",
         description: "Complete civil construction and infrastructure solutions.",
         sections: [
             {
@@ -157,7 +169,7 @@ const servicesData = [
                 id: "miscellaneous-work",
                 title: "Miscellaneous Work",
                 items: [
-                    { name: "Bitumin Work", slug: "bitumin-work" },
+                    { name: "Bitumen Work", slug: "bitumen-work" },
                     { name: "Crushing & Screening", slug: "crushing-screening" },
                     { name: "Earth Work", slug: "earth-work" },
                     { name: "Electrical Work", slug: "electrical-work" },
@@ -171,8 +183,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-005",
         id: "transportation-logistics",
         title: "Transportation & Logistics",
+        icon: "🚚",
+        shortDescription: "End-to-end logistics and transport solutions.",
         description: "End-to-end logistics and transport solutions.",
         sections: [
             {
@@ -201,8 +216,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-006",
         id: "finance-insurance",
         title: "Finance & Insurance",
+        icon: "💰",
+        shortDescription: "Business loans, insurance and financial consultancy.",
         description: "Business loans, insurance and financial consultancy.",
         sections: [
             {
@@ -231,8 +249,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-007",
         id: "accounts-taxation",
+        icon: "📊",
         title: "Accounts & Taxation",
+        shortDescription: "GST, accounting, auditing and compliance services.",
         description: "GST, accounting, auditing and compliance services.",
         sections: [
             {
@@ -262,8 +283,11 @@ const servicesData = [
         ]
     },
     {
+        uid: "srv-008",
         id: "industrial-supplies",
+        icon: "📦",
         title: "Industrial Supplies",
+        shortDescription: "Construction materials and industrial supply chain.",
         description: "Construction materials and industrial supply chain.",
         sections: [
             {
@@ -283,7 +307,7 @@ const servicesData = [
                     { name: "Structural Steel", slug: "structural-steel" },
                     { name: "Girder", slug: "girder" },
                     { name: "Chemical", slug: "chemical" },
-                    { name: "Bitumin", slug: "bitumin" },
+                    { name: "Bitumen", slug: "bitumen" },
                     { name: "Concrete", slug: "concrete" },
                 ]
             },
