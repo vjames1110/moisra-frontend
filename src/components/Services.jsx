@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import servicesData from "../data/servicesData";
+import Header from "./Header";
 
 function Services() {
   const navigate = useNavigate();
+  
 
   return (
     <>

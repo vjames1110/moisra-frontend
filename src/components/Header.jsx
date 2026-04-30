@@ -881,12 +881,60 @@ function Header() {
                   Finance
                 </div>
                 <div className={`submenu ${activeMenu === "finance" ? "open" : ""}`}>
-                  <a>Business Loan</a>
-                  <a>Project Funding</a>
-                  <a>Bank Guarantee - BG</a>
-                  <a>Credit Limit - CC</a>
-                  <a>Equipment Loan</a>
-                  <a>Capital Loan</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Business Loan
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Project Funding
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Bank Guarantee - BG
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Credit Limit - CC
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Equipment Loan
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "finance" }
+                      })
+                    }
+                  >
+                    Capital Loan
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -897,11 +945,51 @@ function Header() {
                   Insurance
                 </div>
                 <div className={`submenu ${activeMenu === "insurance" ? "open" : ""}`}>
-                  <a>Vehicle Insurance</a>
-                  <a>Health Insurance</a>
-                  <a>WC Policy</a>
-                  <a>Term Insurance</a>
-                  <a>CAR Policy</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "insurance" }
+                      })
+                    }
+                  >
+                    Vehicle Insurance
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "insurance" }
+                      })
+                    }
+                  >
+                    Health Insurance
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "insurance" }
+                      })
+                    }
+                  >
+                    WC Policy
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "insurance" }
+                      })
+                    }
+                  >
+                    Term Insurance
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/finance-insurance", {
+                        state: { scrollTo: "insurance" }
+                      })
+                    }
+                  >
+                    CAR Policy
+                  </a>
                 </div>
               </div>
             </div>
@@ -921,12 +1009,60 @@ function Header() {
                   Accounts
                 </div>
                 <div className={`submenu ${activeMenu === "accounts" ? "open" : ""}`}>
-                  <a>Accounting</a>
-                  <a>Book Keeping</a>
-                  <a>Audit</a>
-                  <a>Financial Reporting</a>
-                  <a>Payroll Management</a>
-                  <a>Compliance Management</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Accounting
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Book Keeping
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Audit
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Financial Reporting
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Payroll Management
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "accounts" }
+                      })
+                    }
+                  >
+                    Compliance Management
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -937,12 +1073,60 @@ function Header() {
                   Taxation & Compliances
                 </div>
                 <div className={`submenu ${activeMenu === "taxation" ? "open" : ""}`}>
-                  <a>Goods & Service Tax - GST</a>
-                  <a>TDS</a>
-                  <a>PF</a>
-                  <a>ESIC</a>
-                  <a>Professional Tax</a>
-                  <a>ROC Filing</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    Goods & Service Tax - GST
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    TDS
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    PF
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    ESIC
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    Professional Tax
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/accounts-taxation", {
+                        state: { scrollTo: "taxation" }
+                      })
+                    }
+                  >
+                    ROC Filing
+                  </a>
                 </div>
               </div>
             </div>
@@ -962,9 +1146,33 @@ function Header() {
                   Aggregate Supply
                 </div>
                 <div className={`submenu ${activeMenu === "aggregate" ? "open" : ""}`}>
-                  <a>Sand Supply</a>
-                  <a>Aggregate</a>
-                  <a>Cement</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "aggregate" }
+                      })
+                    }
+                  >
+                    Sand Supply
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "aggregate" }
+                      })
+                    }
+                  >
+                    Aggregate
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "aggregate" }
+                      })
+                    }
+                  >
+                    Cement
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -975,12 +1183,60 @@ function Header() {
                   Consumables Supply
                 </div>
                 <div className={`submenu ${activeMenu === "consumables" ? "open" : ""}`}>
-                  <a>TMT</a>
-                  <a>Structural Steel</a>
-                  <a>Girder</a>
-                  <a>Chemical</a>
-                  <a>Bitumin</a>
-                  <a>Concrete</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    TMT
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    Structural Steel
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    Girder
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    Chemical
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    Bitumin
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "consumables" }
+                      })
+                    }
+                  >
+                    Concrete
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -991,11 +1247,43 @@ function Header() {
                   Mechanical Supply
                 </div>
                 <div className={`submenu ${activeMenu === "mechanical" ? "open" : ""}`}>
-                  <a>Electrical Supply</a>
-                  <a>Spare Parts</a>
-                  <a>Tyre</a>
-                  <a>Battery</a>
-                  </div>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "mechanical" }
+                      })
+                    }
+                  >
+                    Electrical Supply
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "mechanical" }
+                      })
+                    }
+                  >
+                    Spare Parts
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "mechanical" }
+                      })
+                    }
+                  >
+                    Tyre
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/industrial-supplies", {
+                        state: { scrollTo: "mechanical" }
+                      })
+                    }
+                  >
+                    Battery
+                  </a>
+                </div>
               </div>
             </div>
           </div>

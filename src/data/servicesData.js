@@ -54,7 +54,7 @@ const servicesData = [
             }
         ]
     },
-        {
+    {
         id: "workforce-solutions",
         title: "Workforce Solutions",
         description: "Manpower supply, training, and placement services.",
@@ -94,7 +94,7 @@ const servicesData = [
             },
         ]
     },
-      {
+    {
         id: "machinery-equipment",
         title: "Machinery & Equipment",
         description: "Rental, maintenance and sale of construction machinery.",
@@ -170,7 +170,7 @@ const servicesData = [
             },
         ]
     },
-        {
+    {
         id: "transportation-logistics",
         title: "Transportation & Logistics",
         description: "End-to-end logistics and transport solutions.",
@@ -201,25 +201,104 @@ const servicesData = [
         ]
     },
     {
-        id: "transportation-logistics",
-        title: "Transportation & Logistics",
-        description: "End-to-end logistics and transport solutions.",
-    },
-    {
-        id: "industrial-supplies",
-        title: "Industrial Supplies",
-        description: "Construction materials and industrial supply chain.",
-    },
-    {
         id: "finance-insurance",
         title: "Finance & Insurance",
         description: "Business loans, insurance and financial consultancy.",
+        sections: [
+            {
+                id: "finance",
+                title: "Finance",
+                items: [
+                    { name: "Business Loans", slug: "business-loans" },
+                    { name: "Project Funding", slug: "project-funding" },
+                    { name: "Bank Guarantee", slug: "bank-guarantee" },
+                    { name: "Credit Limit", slug: "credit-limit" },
+                    { name: "Equipment Loan", slug: "equipment-loan" },
+                    { name: "Capital Loan", slug: "capital-loan" },
+                ]
+            },
+            {
+                id: "insurance",
+                title: "Insurance",
+                items: [
+                    { name: "Vehicle Insurance", slug: "vehicle-insurance" },
+                    { name: "Health Insurance", slug: "health-insurance" },
+                    { name: "WC Policy", slug: "wc-policy" },
+                    { name: "Term Insurance", slug: "term-insurance" },
+                    { name: "CAR Policy", slug: "car-policy" },
+                ]
+            }
+        ]
     },
     {
         id: "accounts-taxation",
         title: "Accounts & Taxation",
         description: "GST, accounting, auditing and compliance services.",
-    }
+        sections: [
+            {
+                id: "accounts",
+                title: "Accounts",
+                items: [
+                    { name: "Accounting", slug: "accounting" },
+                    { name: "Book Keeping", slug: "book-keeping" },
+                    { name: "Audit", slug: "audit" },
+                    { name: "Financial Reporting", slug: "financial-reporting" },
+                    { name: "Payroll Management", slug: "payroll-management" },
+                    { name: "Compliance Management", slug: "compliance-management" },
+                ]
+            },
+            {
+                id: "taxation",
+                title: "Taxation & Compliances",
+                items: [
+                    { name: "Goods & Service Tax - GST", slug: "gst" },
+                    { name: "TDS", slug: "tds" },
+                    { name: "PF", slug: "pf" },
+                    { name: "ESIC", slug: "esic" },
+                    { name: "Professional Tax", slug: "professional-tax" },
+                    { name: "ROC Filing", slug: "roc-filing" },
+                ]
+            }
+        ]
+    },
+    {
+        id: "industrial-supplies",
+        title: "Industrial Supplies",
+        description: "Construction materials and industrial supply chain.",
+        sections: [
+            {
+                id: "aggregate",
+                title: "Aggregate Supply",
+                items: [
+                    { name: "Sand Supply", slug: "sand-supply" },
+                    { name: "Aggregate", slug: "aggregate" },
+                    { name: "Cement", slug: "cement" },
+                ]
+            },
+            {
+                id: "consumables",
+                title: "Consumables Supply",
+                items: [
+                    { name: "TMT", slug: "tmt" },
+                    { name: "Structural Steel", slug: "structural-steel" },
+                    { name: "Girder", slug: "girder" },
+                    { name: "Chemical", slug: "chemical" },
+                    { name: "Bitumin", slug: "bitumin" },
+                    { name: "Concrete", slug: "concrete" },
+                ]
+            },
+            {
+                id: "mechanical",
+                title: "Mechanical Supply",
+                items: [
+                    { name: "Electrical Supply", slug: "electrical-supply" },
+                    { name: "Spare Parts", slug: "spare-parts" },
+                    { name: "Tyre", slug: "tyre" },
+                    { name: "Battery", slug: "battery" },
+                ]
+            }
+        ]
+    },
 ];
 
 export default servicesData;
