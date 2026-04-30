@@ -570,8 +570,24 @@ function Header() {
                   Sub Contracting
                 </div>
                 <div className={`submenu ${activeMenu === "subcontracting" ? "open" : ""}`}>
-                  <a>B2B</a>
-                  <a>B2C</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "subcontracting" }
+                      })
+                    }
+                  >
+                    B2B
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "subcontracting" }
+                      })
+                    }
+                  >
+                    B2C
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -582,11 +598,51 @@ function Header() {
                   Construction Work
                 </div>
                 <div className={`submenu ${activeMenu === "civil-construction" ? "open" : ""}`}>
-                  <a>Building Construction</a>
-                  <a>Civil Construction</a>
-                  <a>Road Construction</a>
-                  <a>Bridge Construction</a>
-                  <a>Industrial Construction</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "civil-construction" }
+                      })
+                    }
+                  >
+                    Building Construction
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "civil-construction" }
+                      })
+                    }
+                  >
+                    Civil Construction
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "civil-construction" }
+                      })
+                    }
+                  >
+                    Road Construction
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "civil-construction" }
+                      })
+                    }
+                  >
+                    Bridge Construction
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "civil-construction" }
+                      })
+                    }
+                  >
+                    Infrastructure Development
+                  </a>
                 </div>
               </div>
               <div className="item">
@@ -597,15 +653,87 @@ function Header() {
                   Miscellaneous Work
                 </div>
                 <div className={`submenu ${activeMenu === "miscellaneous" ? "open" : ""}`}>
-                  <a>Bitumin Work</a>
-                  <a>Curshing & Screening</a>
-                  <a>Earth Work</a>
-                  <a>Electrical Work</a>
-                  <a>Fabrication Work</a>
-                  <a>Interior Work</a>
-                  <a>Plumbing Work</a>
-                  <a>Road Marking</a>
-                  <a>P-Way Work</a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Bitumin Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Crushing & Screening
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Earth Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Electrical Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Fabrication Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Interior Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Plumbing Work
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    Road Marking
+                  </a>
+                  <a
+                    onClick={() =>
+                      navigate("/services/civil-construction", {
+                        state: { scrollTo: "miscellaneous" }
+                      })
+                    }
+                  >
+                    P-Way Work
+                  </a>
                 </div>
               </div>
             </div>

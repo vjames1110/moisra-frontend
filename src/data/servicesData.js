@@ -133,11 +133,42 @@ const servicesData = [
         id: "civil-construction",
         title: "Civil & Construction",
         description: "Complete civil construction and infrastructure solutions.",
-    },
-    {
-        id: "machinery-equipment",
-        title: "Machinery & Equipment",
-        description: "Rental, maintenance and sale of construction machinery.",
+        sections: [
+            {
+                id: "sub-contracting",
+                title: "Sub-Contracting",
+                items: [
+                    { name: "B2B", slug: "b2b" },
+                    { name: "B2C", slug: "b2c" },
+                ]
+            },
+            {
+                id: "construction-work",
+                title: "Construction Work",
+                items: [
+                    { name: "Building Construction", slug: "building-construction" },
+                    { name: "Civil Construction", slug: "civil-construction" },
+                    { name: "Road Construction", slug: "road-construction" },
+                    { name: "Bridge Construction", slug: "bridge-construction" },
+                    { name: "Infrastructure Development", slug: "infrastructure-development" },
+                ]
+            },
+            {
+                id: "miscellaneous-work",
+                title: "Miscellaneous Work",
+                items: [
+                    { name: "Bitumin Work", slug: "bitumin-work" },
+                    { name: "Crushing & Screening", slug: "crushing-screening" },
+                    { name: "Earth Work", slug: "earth-work" },
+                    { name: "Electrical Work", slug: "electrical-work" },
+                    { name: "Fabrication Work", slug: "fabrication-work" },
+                    { name: "Interior Work", slug: "interior-work" },
+                    { name: "Plumbing Work", slug: "plumbing-work" },
+                    { name: "Road Marking", slug: "road-marking" },
+                    { name: "P-Way Work", slug: "p-way-work" },
+                ]
+            },
+        ]
     },
     {
         id: "transportation-logistics",
