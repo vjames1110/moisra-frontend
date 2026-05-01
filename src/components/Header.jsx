@@ -7,14 +7,29 @@ function Header() {
   const [show, setShow] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
 
+  // Smooth scroll with header offset
+
+  const scrollToSection =(id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 70;
+      const top = element.offsetTop - offset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      })
+    }
+  }
+
   return (
     <>
       <header className="header">
         <div className="logo">MOISRA</div>
 
         <nav>
-          <a onClick={() => navigate("/")}>Home</a>
-          <a onClick={() => navigate("/about")}>About</a>
+          <a onClick={() => scrollToSection("home")}>Home</a>
+          <a onClick={() => scrollToSection("about")}>About</a>
 
           <div
             className="servicesTrigger"
@@ -24,8 +39,8 @@ function Header() {
             Services
           </div>
 
-          <a onClick={() => navigate("/clients")}>Clients</a>
-          <a>Contact</a>
+          <a onClick={() => scrollToSection("clients")}>Clients</a>
+          <a onClick={() => scrollToSection("contact")}>Contact</a>
         </nav>
       </header>
 

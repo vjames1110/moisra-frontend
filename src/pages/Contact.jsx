@@ -98,8 +98,12 @@ function Contact() {
               <option value="">Select Service</option>
               <option>IT Solutions</option>
               <option>Workforce Solutions</option>
-              <option>Construction Consulting</option>
-              <option>Finance & Loans</option>
+              <option>Machinery & Equipment</option>
+              <option>Civil & COnstruction</option>
+              <option>Transportation & Logistics</option>
+              <option>Finance & Insurance</option>
+              <option>Accounts & Taxation</option>
+              <option>Industrial Supplies</option>
             </select>
 
             <textarea

@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
-
 function Footer() {
+
+  // ✅ Simple smooth scroll
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <footer className="footer">
@@ -18,10 +24,10 @@ function Footer() {
           {/* ✅ Column 2: Quick Links */}
           <div className="footer-column">
             <h4>Quick Links</h4>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/clients">Our Clients</Link>
-            <Link to="/contact">Contact</Link>
+            <a onClick={() =>scrollToSection("home")}>Home</a>
+            <a onClick={() =>scrollToSection("about")}>About</a>
+            <a onClick={() =>scrollToSection("clients")}>Our Clients</a>
+            <a onClick={() =>scrollToSection("contact")}>Contact</a>
           </div>
 
 
