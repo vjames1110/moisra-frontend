@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import servicesData from "../data/servicesData";
 
 function Header() {
   const navigate = useNavigate();
+
   const [show, setShow] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [activeSection, setActiveSection] = useState("home");
 
-  // Smooth scroll with header offset
-
-  const scrollToSection =(id) => {
+  // ✅ Smooth scroll with offset (for fixed header)
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       const offset = 70;
@@ -17,10 +18,37 @@ function Header() {
 
       window.scrollTo({
         top,
-        behavior: "smooth"
-      })
+        behavior: "smooth",
+      });
     }
-  }
+  };
+
+  // ✅ Detect active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["home", "about", "clients", "contact"];
+
+      let current = "home";
+
+      sections.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+
+          // section is in viewport
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            current = id;
+          }
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
@@ -28,9 +56,21 @@ function Header() {
         <div className="logo">MOISRA</div>
 
         <nav>
-          <a onClick={() => scrollToSection("home")}>Home</a>
-          <a onClick={() => scrollToSection("about")}>About</a>
+          <a
+            className={activeSection === "home" ? "active" : ""}
+            onClick={() => scrollToSection("home")}
+          >
+            Home
+          </a>
 
+          <a
+            className={activeSection === "about" ? "active" : ""}
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </a>
+
+          {/* ✅ Services stays same */}
           <div
             className="servicesTrigger"
             onMouseEnter={() => setShow(true)}
@@ -39,11 +79,23 @@ function Header() {
             Services
           </div>
 
-          <a onClick={() => scrollToSection("clients")}>Clients</a>
-          <a onClick={() => scrollToSection("contact")}>Contact</a>
+          <a
+            className={activeSection === "clients" ? "active" : ""}
+            onClick={() => scrollToSection("clients")}
+          >
+            Clients
+          </a>
+
+          <a
+            className={activeSection === "contact" ? "active" : ""}
+            onClick={() => scrollToSection("contact")}
+          >
+            Contact
+          </a>
         </nav>
       </header>
 
+      {/* ✅ MEGA MENU */}
       <div
         className={`megaMenu ${show ? "show" : ""}`}
         onMouseEnter={() => setShow(true)}
@@ -52,7 +104,6 @@ function Header() {
         <div className="megaContent">
           {servicesData.map((service) => (
             <div key={service.id} className="column">
-
               <h4
                 onClick={() => navigate(`/services/${service.id}`)}
                 style={{ cursor: "pointer" }}
@@ -63,7 +114,6 @@ function Header() {
               <div className="accordion">
                 {service.sections.map((section) => (
                   <div key={section.id} className="item">
-
                     <div
                       className="parent"
                       onClick={() =>
@@ -76,15 +126,16 @@ function Header() {
                     </div>
 
                     <div
-                      className={`submenu ${activeMenu === section.id ? "open" : ""
-                        }`}
+                      className={`submenu ${
+                        activeMenu === section.id ? "open" : ""
+                      }`}
                     >
                       {section.items.map((item) => (
                         <a
                           key={item.slug}
                           onClick={() =>
                             navigate(`/services/${service.id}`, {
-                              state: { scrollTo: section.id }
+                              state: { scrollTo: section.id },
                             })
                           }
                         >
@@ -92,16 +143,15 @@ function Header() {
                         </a>
                       ))}
                     </div>
-
                   </div>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
       </div>
 
+      {/* ✅ STYLES */}
       <style jsx>{`
         .header {
           position: fixed;
@@ -109,7 +159,7 @@ function Header() {
           left: 0;
           width: 100%;
           height: 70px;
-          background: #0B1C3D;
+          background: #0b1c3d;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -128,35 +178,41 @@ function Header() {
           gap: 40px;
         }
 
-        nav a,
-        span {
+        nav a {
           cursor: pointer;
+          position: relative;
+          color: white;
+        }
+
+        /* ✅ ACTIVE LINK */
+        nav a.active {
+          color: #f59e0b;
+          font-weight: 600;
+        }
+
+        nav a.active::after {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #f59e0b;
         }
 
         /* MEGA MENU */
-
         .megaMenu {
           position: fixed;
           top: 70px;
           left: 0;
           width: 100%;
           background: white;
-          box-shadow: 0 15px 40px rgba(0,0,0,.08);
-
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
           opacity: 0;
           visibility: hidden;
           transform: translateY(-10px);
-          transition: all .25s ease;
+          transition: all 0.25s ease;
           z-index: 999;
-        }
-          .megaMenu::before{
-            content:"";
-            position:absolute;
-            top:-20px;
-            left:0;
-            width:100%;
-            height:20px;
-            background:transparent;
         }
 
         .megaMenu.show {
@@ -169,7 +225,6 @@ function Header() {
           max-width: 1400px;
           margin: auto;
           padding: 40px 60px;
-
           display: grid;
           grid-template-columns: repeat(5, 1fr);
           gap: 40px;
@@ -177,7 +232,7 @@ function Header() {
 
         .column h4 {
           margin-bottom: 12px;
-          color: #0B1C3D;
+          color: #0b1c3d;
         }
 
         .column a {
@@ -189,68 +244,34 @@ function Header() {
         }
 
         .column a:hover {
-          color: #F59E0B;
+          color: #f59e0b;
         }
 
-        /* responsive */
-
-        @media(max-width:1100px){
-          .megaContent{
-            grid-template-columns:repeat(3,1fr);
-          }
-        }
-
-        @media(max-width:700px){
-          .megaContent{
-            grid-template-columns:repeat(2,1fr);
-            padding:30px 20px;
-          }
-        }
-        
         .accordion {
-display:flex;
-flex-direction:column;
-}
+          display: flex;
+          flex-direction: column;
+        }
 
-.parent{
-cursor:pointer;
-padding:6px 0;
-font-size:14px;
-color:#333;
-}
+        .parent {
+          cursor: pointer;
+          padding: 6px 0;
+          font-size: 14px;
+          color: #333;
+        }
 
-.parent:hover{
-color:#F59E0B;
-}
+        .submenu {
+          max-height: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+          padding-left: 15px;
+        }
 
-.submenu{
-max-height:0;
-overflow:hidden;
-transition:all .3s ease;
-padding-left:15px;
-}
-
-.submenu.open{
-max-height:200px;
-margin-bottom:8px;
-}
-
-.submenu a{
-display:block;
-font-size:13px;
-color:#666;
-padding:4px 0;
-cursor:pointer;
-}
-
-.submenu a:hover{
-color:#F59E0B;
-}
-
+        .submenu.open {
+          max-height: 200px;
+          margin-bottom: 8px;
+        }
       `}</style>
-
     </>
-
   );
 }
 
