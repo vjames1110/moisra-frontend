@@ -13,8 +13,8 @@ function Header() {
         <div className="logo">MOISRA</div>
 
         <nav>
-          <a>Home</a>
-          <a>About</a>
+          <a onClick={() => navigate("/")}>Home</a>
+          <a onClick={() => navigate("/about")}>About</a>
 
           <div
             className="servicesTrigger"
