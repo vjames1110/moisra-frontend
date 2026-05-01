@@ -9,7 +9,7 @@ function Header() {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSection, setActiveSection] = useState("home");
 
-  // ✅ Smooth scroll with offset (for fixed header)
+  // ✅ Smooth scroll
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,19 +23,16 @@ function Header() {
     }
   };
 
-  // ✅ Detect active section on scroll
+  // ✅ Active section tracking
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "clients", "contact"];
-
       let current = "home";
 
       sections.forEach((id) => {
         const element = document.getElementById(id);
         if (element) {
           const rect = element.getBoundingClientRect();
-
-          // section is in viewport
           if (rect.top <= 100 && rect.bottom >= 100) {
             current = id;
           }
@@ -46,7 +43,6 @@ function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -70,7 +66,7 @@ function Header() {
             About
           </a>
 
-          {/* ✅ Services stays same */}
+          {/* ✅ Services (UNCHANGED) */}
           <div
             className="servicesTrigger"
             onMouseEnter={() => setShow(true)}
@@ -125,6 +121,7 @@ function Header() {
                       {section.title}
                     </div>
 
+                    {/* ✅ FIXED ACCORDION */}
                     <div
                       className={`submenu ${
                         activeMenu === section.id ? "open" : ""
@@ -184,7 +181,6 @@ function Header() {
           color: white;
         }
 
-        /* ✅ ACTIVE LINK */
         nav a.active {
           color: #f59e0b;
           font-weight: 600;
@@ -259,17 +255,19 @@ function Header() {
           color: #333;
         }
 
+        /* ✅ FIXED ACCORDION CSS */
         .submenu {
-          max-height: 0;
-          overflow: hidden;
-          transition: all 0.3s ease;
-          padding-left: 15px;
-        }
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 15px;
+  opacity: 0;
+}
 
-        .submenu.open {
-          max-height: 200px;
-          margin-bottom: 8px;
-        }
+.submenu.open {
+  max-height: 600px; /* large enough for content */
+  opacity: 1;
+}
       `}</style>
     </>
   );
