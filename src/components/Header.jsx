@@ -24,7 +24,7 @@ function Header() {
             Services
           </div>
 
-          <a>Clients</a>
+          <a onClick={() => navigate("/clients")}>Clients</a>
           <a>Contact</a>
         </nav>
       </header>

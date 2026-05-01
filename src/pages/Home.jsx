@@ -4,6 +4,7 @@ import Services from "../components/Services";
 import WhyChoose from "../components/WhyChoose";
 import Clients from "../components/Clients";
 import Footer from "../components/Footer";
+import Contact from "./Contact";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Services />
       <WhyChoose />
       <Clients />
+      <Contact />
       <Footer />
     </>
   );
