@@ -150,39 +150,66 @@ function Header() {
 
       {/* ✅ STYLES */}
       <style jsx>{`
-        .header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 70px;
-          background: #0b1c3d;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 60px;
-          color: white;
-          z-index: 1000;
-        }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #1E1B4B 45%,
+    #0F766E 100%
+  );
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 60px;
+
+  z-index: 1000;
+}
 
         .logo {
-          font-size: 22px;
-          font-weight: 700;
-        }
+  font-size: 24px;
+  font-weight: 800;
+
+  color: #FFFFFF;
+
+  letter-spacing: 1px;
+
+  flex-shrink: 0;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
 
         nav {
           display: flex;
           gap: 40px;
+          align-items: center;
         }
 
         nav a {
           cursor: pointer;
           position: relative;
-          color: white;
+          color: var(--text-light);
+          font-size: var(--fs-sm);
+          white-space: nowrap;
         }
 
         nav a.active {
-          color: #f59e0b;
+          color: var(--accent);
           font-weight: 600;
         }
 
@@ -193,7 +220,11 @@ function Header() {
           left: 0;
           width: 100%;
           height: 2px;
-          background: #f59e0b;
+          background: linear-gradient(
+  90deg,
+  #FBBF24,
+  #F59E0B
+);
         }
 
         /* MEGA MENU */
@@ -267,6 +298,55 @@ function Header() {
 .submenu.open {
   max-height: 600px; /* large enough for content */
   opacity: 1;
+}
+
+/* ===========================
+   MOBILE HEADER
+=========================== */
+
+@media (max-width:900px){
+
+  .header{
+    padding: 0 16px;
+    height: auto;
+    min-height: 70px;
+
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  nav{
+    width:100%;
+
+    gap:16px;
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    padding-bottom:4px;
+
+    scrollbar-width:none;
+  }
+
+  nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .megaMenu{
+    top:110px;
+  }
+
+  .megaContent{
+    grid-template-columns:1fr;
+    padding:20px;
+  }
+
 }
       `}</style>
     </>

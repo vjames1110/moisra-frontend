@@ -39,46 +39,62 @@ function Hero() {
       </section>
 
       <style jsx>{`
-.hero {
-  width: 100%;
-  height: 100vh; /* ✅ FIX: lock full screen */
-  min-height: 600px; /* ✅ safety for very small screens */
+      .hero {
+          width: 100%;
+          height: 100vh;
+          min-height: 600px;
 
-  padding-top: 70px; /* header offset */
+          padding-top: 70px;
 
-  background-image: 
-    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
+          background-image:
+          linear-gradient(
+        rgba(2,6,23,.78),
+        rgba(30,27,75,.72)
+          ),
+          url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-  text-align: center;
-  color: white;
+          text-align: center;
 
-  padding-left: 20px;
-  padding-right: 20px;
-}
+          color: #FFFFFF;
+
+          padding-left: 20px;
+          padding-right: 20px;
+        }
 
         .content {
           max-width: 900px;
         }
 
         h1 {
-          font-size: 56px;
-          font-weight: 700;
-          letter-spacing: 1px;
+          font-size: 64px;
+
+          font-weight: 800;
+
+          letter-spacing: 2px;
+
+          text-transform: uppercase;
+
+          text-shadow: 0 4px 18px rgba(0,0,0,.30);
         }
 
         p {
-          margin: 20px 0 30px;
-          font-size: 20px;
-          color: #ddd;
+          margin: 24px 0 36px;
+
+          font-size: 22px;
+
+          color: rgba(255,255,255,.88);
+
+          font-weight: 400;
+
+          letter-spacing: .5px;
         }
 
         .buttons {
@@ -90,34 +106,55 @@ function Hero() {
 
         /* ✅ BUTTONS (Premium) */
         .primary {
-          background: #F59E0B;
+          background: linear-gradient(
+          135deg,
+          #FBBF24,
+          #F59E0B
+        );
+
+          color: #FFFFFF;
+
+          padding: 16px 36px;
+
           border: none;
-          padding: 14px 32px;
-          cursor: pointer;
-          font-weight: 600;
-          border-radius: 6px;
-          transition: all 0.3s ease;
+
+          border-radius: 8px;
+
+          font-size: 16px;
+
+          font-weight: 700;
+
+          box-shadow: 0 8px 24px rgba(0,0,0,.20);
+
+          transition: all .3s ease;
         }
 
         .primary:hover {
-          background: #d97706;
-          transform: translateY(-2px);
+          transform: translateY(-3px);
+          box-shadow: 0 14px 28px rgba(0,0,0,.28);
         }
 
         .secondary {
           background: transparent;
-          border: 2px solid white;
-          padding: 14px 32px;
-          color: white;
-          border-radius: 6px;
-          cursor: pointer;
-          transition: all 0.3s ease;
+
+          border: 2px solid rgba(255,255,255,.85);
+
+          padding: 16px 36px;
+
+          color: #FFFFFF;
+
+          border-radius: 8px;
+
+          font-size: 16px;
+
+          font-weight: 600;
+
+          transition: all .3s ease;
         }
 
         .secondary:hover {
-          background: white;
-          color: #0B1C3D;
-          transform: translateY(-2px);
+          background: rgba(255,255,255,.12);
+          transform: translateY(-3px);
         }
 
         /* ✅ TABLET */
@@ -140,11 +177,11 @@ function Hero() {
           }
 
           h1 {
-            font-size: 30px;
+            font-size: 38px;
           }
 
           p {
-            font-size: 16px;
+            font-size: 18px;
           }
 
           .buttons {

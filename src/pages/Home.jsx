@@ -22,6 +22,7 @@ function Home() {
       </section>
 
       {/* ✅ ABOUT (UPGRADED) */}
+      {/* ✅ ABOUT (UPGRADED) */}
       <section id="about" className="about">
         <div className="container">
 
@@ -30,12 +31,17 @@ function Home() {
 
           {/* DESCRIPTION */}
           <p className="desc">
-            MOISRA Consultancy is a multi-domain consulting firm helping businesses grow
-            with strategic solutions across construction, IT, workforce, and finance.
+            MOISRA Consultancy is a multi-domain consulting firm helping businesses
+            grow with strategic solutions across construction, IT, workforce,
+            civil engineering, industrial supplies and financial services.
+            We combine industry expertise, execution excellence and
+            client-focused innovation to deliver measurable business impact.
           </p>
+
 
           {/* STATS CARDS */}
           <div className="visual">
+
             <div className="card">
               <h3>100+</h3>
               <p>Projects Delivered</p>
@@ -50,24 +56,11 @@ function Home() {
               <h3>5+</h3>
               <p>Industries Covered</p>
             </div>
-          </div>
 
-          {/* MISSION + VISION */}
-          <div className="points">
-            <div>
-              <h3>Our Mission</h3>
-              <p>Deliver scalable and impactful business solutions.</p>
-            </div>
-
-            <div>
-              <h3>Our Vision</h3>
-              <p>Become a trusted consultancy partner across industries.</p>
-            </div>
           </div>
 
         </div>
 
-        {/* WHY CHOOSE */}
         <WhyChoose />
       </section>
 

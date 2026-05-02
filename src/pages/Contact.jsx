@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as FaIcons from "react-icons/fa";
 
 function Contact() {
 
@@ -19,7 +20,7 @@ function Contact() {
     });
   };
 
-  // ✅ Handle Submit (UI only for now)
+  // ✅ Handle Submit
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
@@ -30,38 +31,62 @@ function Contact() {
     <>
       <div className="contact-page">
 
-        {/* ✅ HERO */}
+        {/* HERO */}
         <section className="contact-hero">
-          <h1>Contact Us</h1>
-          <p>Let’s discuss how we can help your business grow</p>
+          <h1>Let's Build Something Great</h1>
+          <p>
+            Connect with MOISRA and discover tailored consultancy solutions.
+          </p>
         </section>
 
-        {/* ✅ MAIN SECTION */}
+
+        {/* MAIN */}
         <section className="contact-container">
 
-          {/* LEFT: CONTACT INFO */}
+          {/* LEFT SIDE */}
           <div className="contact-info">
+
             <h2>Get in Touch</h2>
-            <p>We’re here to help you with your business needs.</p>
 
-            <div className="info-box">
-              <strong>Email:</strong>
-              <p>moisra@gmail.com</p>
+            <p className="subtitle">
+              Whether you're a startup, enterprise, or project owner—
+              our team is ready to support your journey.
+            </p>
+
+
+            <div className="info-card">
+              <FaIcons.FaEnvelope />
+              <div>
+                <strong>Email</strong>
+                <p>moisra@gmail.com</p>
+              </div>
             </div>
 
-            <div className="info-box">
-              <strong>Phone:</strong>
-              <p>+91 81200 01481</p>
+
+            <div className="info-card">
+              <FaIcons.FaPhoneAlt />
+              <div>
+                <strong>Phone</strong>
+                <p>+91 81200 01481</p>
+              </div>
             </div>
 
-            <div className="info-box">
-              <strong>Location:</strong>
-              <p>India</p>
+
+            <div className="info-card">
+              <FaIcons.FaMapMarkerAlt />
+              <div>
+                <strong>Location</strong>
+                <p>India</p>
+              </div>
             </div>
+
           </div>
 
-          {/* RIGHT: FORM */}
+
+          {/* RIGHT SIDE */}
           <form className="contact-form" onSubmit={handleSubmit}>
+
+            <h3>Request Consultation</h3>
 
             <input
               type="text"
@@ -99,7 +124,7 @@ function Contact() {
               <option>IT Solutions</option>
               <option>Workforce Solutions</option>
               <option>Machinery & Equipment</option>
-              <option>Civil & COnstruction</option>
+              <option>Civil & Construction</option>
               <option>Transportation & Logistics</option>
               <option>Finance & Insurance</option>
               <option>Accounts & Taxation</option>
@@ -108,108 +133,204 @@ function Contact() {
 
             <textarea
               name="message"
-              placeholder="Your Message"
               rows="5"
+              placeholder="Tell us about your requirement..."
               value={form.message}
               onChange={handleChange}
               required
             />
 
-            <button type="submit">Send Enquiry</button>
+            <button type="submit">
+              Send Enquiry
+            </button>
 
           </form>
+
         </section>
 
-        {/* ✅ CTA STRIP */}
+
+        {/* CTA */}
         <section className="contact-cta">
-          <h2>Looking for Immediate Assistance?</h2>
-          <p>Reach out to us and our team will respond quickly.</p>
+          <h2>Need Immediate Assistance?</h2>
+          <p>Our experts are ready to connect with you.</p>
         </section>
 
       </div>
 
-      {/* ✅ STYLES */}
+
       <style jsx>{`
-        .contact-page {
-          font-family: sans-serif;
+        .contact-page{
+          background:#fff;
         }
+
 
         /* HERO */
-        .contact-hero {
-          background: linear-gradient(135deg, #0B1C3D, #163E7A);
-          color: white;
-          text-align: center;
-          padding: 100px 20px;
+        .contact-hero{
+          text-align:center;
+          padding:100px 20px 60px;
         }
 
-        .contact-hero h1 {
-          font-size: 40px;
+        .contact-hero h1{
+          font-size:40px;
+          color:#0B1C3D;
+          margin-bottom:15px;
         }
+
+        .contact-hero p{
+          color:#666;
+        }
+
 
         /* MAIN */
-        .contact-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 40px;
-          max-width: 1100px;
-          margin: auto;
-          padding: 80px 20px;
+        .contact-container{
+          max-width:1200px;
+          margin:auto;
+          padding:40px 20px 100px;
+
+          display:grid;
+          grid-template-columns:1fr 1fr;
+          gap:50px;
+          align-items:start;
         }
+
 
         /* LEFT */
-        .contact-info h2 {
-          margin-bottom: 10px;
+        .contact-info h2{
+          color:#0B1C3D;
+          margin-bottom:15px;
         }
 
-        .contact-info p {
-          color: #555;
-          margin-bottom: 20px;
+        .subtitle{
+          color:#666;
+          margin-bottom:35px;
+          line-height:1.6;
         }
 
-        .info-box {
-          margin-bottom: 20px;
+
+        .info-card{
+          display:flex;
+          gap:20px;
+          align-items:center;
+
+          background:#F8FAFC;
+          padding:20px;
+          border-radius:12px;
+
+          margin-bottom:20px;
         }
+
+        .info-card svg{
+          font-size:22px;
+          color:#F59E0B;
+          flex-shrink:0;
+        }
+
+        .info-card p{
+          margin-top:4px;
+          color:#666;
+        }
+
 
         /* FORM */
-        .contact-form {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          background: white;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        .contact-form{
+          background:white;
+          padding:35px;
+
+          border-radius:16px;
+
+          box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+          display:flex;
+          flex-direction:column;
+          gap:16px;
         }
+
+        .contact-form h3{
+          color:#0B1C3D;
+          margin-bottom:10px;
+        }
+
 
         .contact-form input,
         .contact-form select,
-        .contact-form textarea {
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          font-size: 14px;
+        .contact-form textarea{
+
+          padding:14px;
+
+          border:1px solid #ddd;
+          border-radius:8px;
+
+          font-size:14px;
+          outline:none;
+
+          transition:.3s;
         }
 
-        .contact-form button {
-          background: #0B1C3D;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          font-weight: bold;
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus{
+          border-color:#F59E0B;
         }
 
-        .contact-form button:hover {
-          background: #163E7A;
+
+        .contact-form button{
+          background:#0B1C3D;
+          color:white;
+
+          border:none;
+          border-radius:8px;
+
+          padding:14px;
+
+          font-weight:600;
+          cursor:pointer;
+
+          transition:.3s;
         }
+
+        .contact-form button:hover{
+          background:#F59E0B;
+        }
+
 
         /* CTA */
-        .contact-cta {
-          background: #f8f9fc;
-          text-align: center;
-          padding: 60px 20px;
+        .contact-cta{
+          text-align:center;
+          background:#F8FAFC;
+
+          padding:70px 20px;
         }
+
+        .contact-cta h2{
+          color:#0B1C3D;
+          margin-bottom:10px;
+        }
+
+
+        /* TABLET */
+        @media(max-width:900px){
+
+          .contact-container{
+            grid-template-columns:1fr;
+          }
+
+        }
+
+
+        /* MOBILE */
+        @media(max-width:600px){
+
+          .contact-hero h1{
+            font-size:28px;
+          }
+
+          .contact-form{
+            padding:25px 20px;
+          }
+
+        }
+
       `}</style>
     </>
   );

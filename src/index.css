@@ -1,16 +1,124 @@
+/* =====================================
+   RESET
+===================================== */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* =====================================
+   DESIGN SYSTEM
+===================================== */
+:root{
+
+  /* PRIMARY BRAND */
+  --primary:#0B1C3D;
+  --primary-light:#13294F;
+  --primary-dark:#071226;
+
+  /* ACCENT */
+  --accent:#F59E0B;
+  --accent-hover:#D97706;
+
+  /* TEXT */
+  --text-primary:#111827;
+  --text-secondary:#6B7280;
+  --text-light:#FFFFFF;
+
+  /* BACKGROUNDS */
+  --bg-light:#F8FAFC;
+  --bg-white:#FFFFFF;
+
+  /* GRADIENTS */
+
+  /* PREMIUM BRAND GRADIENTS */
+
+--primary:#0F172A;
+--primary-light:#1E1B4B;
+--primary-dark:#020617;
+
+/* GOLD ACCENT */
+--accent:#FBBF24;
+--accent-hover:#F59E0B;
+
+/* MAIN BRAND */
+--gradient-primary:
+  linear-gradient(
+    135deg,
+    #020617 0%,
+    #1E1B4B 45%,
+    #0F766E 100%
+  );
+
+/* CTA */
+--gradient-accent:
+  linear-gradient(
+    135deg,
+    #FBBF24 0%,
+    #F59E0B 100%
+  );
+
+  /* SPACING */
+  --space-xs:8px;
+  --space-sm:16px;
+  --space-md:24px;
+  --space-lg:40px;
+  --space-xl:60px;
+  --space-2xl:100px;
+
+  /* RADIUS */
+  --radius-sm:6px;
+  --radius-md:12px;
+  --radius-lg:20px;
+
+  /* SHADOWS */
+  --shadow-sm:
+    0 4px 12px rgba(0,0,0,.08);
+
+  --shadow-md:
+    0 10px 30px rgba(0,0,0,.12);
+
+  /* TYPOGRAPHY */
+  --fs-xs:14px;
+  --fs-sm:16px;
+  --fs-md:18px;
+  --fs-lg:24px;
+  --fs-xl:42px;
+  --fs-2xl:56px;
+}
+
+/* =====================================
+   GLOBAL
+===================================== */
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-padding:0;
-overflow-x:hidden;
-font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  color:var(--text-primary);
+  background:var(--bg-white);
+}
+
+a{
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+  border:none;
 }
 
 #root{
-width:100%;
+  width:100%;
 }
