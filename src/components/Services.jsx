@@ -68,6 +68,7 @@ function Services() {
   font-weight: 800;
 
   color: #FFFFFF;
+  text-shadow: 0 2px 12px rgba(0,0,0,.25);
 
   letter-spacing: 1px;
 
