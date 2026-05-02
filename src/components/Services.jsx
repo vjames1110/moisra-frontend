@@ -22,7 +22,7 @@ function Services() {
     <>
       <section className="services">
         <h2>Our Services</h2>
-        <p>Comprehensive Submission across industries</p>
+        <p className="subtitle">Comprehensive Submission across industries</p>
 
         <div className="grid">
           {sortedServices.map((item) => (
@@ -45,16 +45,46 @@ function Services() {
 
       <style jsx>{`
         .services {
-          padding: 120px 60px;
-          background: #F8FAFC;
-        }
+  padding: 120px 60px;
 
-        h2 {
-          text-align: center;
-          margin-bottom: 60px;
-          font-size: 38px;
-          color: #0B1C3D;
-        }
+  background:
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #111827 35%,
+      #1E1B4B 100%
+    );
+
+  position: relative;
+}
+
+        .services h2 {
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #FFFFFF;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+  .services .subtitle {
+  text-align: center;
+
+  margin-bottom: 60px;
+
+  font-size: 18px;
+  font-weight: 400;
+
+
+  color: rgba(255,255,255,.82);
+  letter-spacing: .5px
+}
 
         .grid {
           display: grid;
@@ -63,46 +93,76 @@ function Services() {
         }
 
         .card {
-          background: white;
-          padding: 35px 25px;
-          border-radius: 12px;
-          box-shadow: 0 10px 30px rgba(0,0,0,.06);
-          text-align: center;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
+  background: rgba(255,255,255,.06);
+
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  padding: 35px 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 32px rgba(0,0,0,.20);
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: all .35s ease;
+}
 
         .card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 20px 40px rgba(0,0,0,.1);
-        }
+  transform: translateY(-10px);
+
+  border-color: rgba(251,191,36,.35);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.28);
+}
 
         .icon {
-          font-size: 36px;
-          margin-bottom: 15px;
-          color: #F59E0B;
-          display: flex;
-          justify-content: center;
+  font-size: 40px;
+
+  margin-bottom: 18px;
+
+  color: #FBBF24;
+
+  display: flex;
+
+  justify-content: center;
 }
 
         .card h3 {
-          margin-bottom: 10px;
-          color: #0B1C3D;
-        }
+  margin-bottom: 12px;
+
+  color: #FFFFFF;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
 
         .card p {
-          color: #555;
-          font-size: 14px;
-          min-height: 40px;
-        }
+  color: rgba(255,255,255,.72);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  min-height: 48px;
+}
 
         .link {
-          display: inline-block;
-          margin-top: 15px;
-          font-size: 14px;
-          color: #F59E0B;
-          font-weight: 500;
-        }
+  display: inline-block;
+
+  margin-top: 18px;
+
+  font-size: 14px;
+
+  color: #FBBF24;
+
+  font-weight: 700;
+}}
 
         .card:hover .link {
           text-decoration: underline;
