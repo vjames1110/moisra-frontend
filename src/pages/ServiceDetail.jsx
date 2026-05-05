@@ -2,6 +2,7 @@ import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import servicesData from "../data/servicesData";
 
+
 function ServiceDetail() {
   const { id } = useParams();
   const location = useLocation();

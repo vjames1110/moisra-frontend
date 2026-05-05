@@ -32,7 +32,7 @@ function WhyChoose() {
 
   return (
     <>
-      <section id="about" className="why">
+      <section className="why">
         <div className="container">
           <h2>Why Choose Moisra</h2>
           <p className="subtitle">
@@ -54,94 +54,135 @@ function WhyChoose() {
       <style jsx>{`
         .why {
           padding: 100px 60px;
-          background: white;
+          background: linear-gradient(
+      180deg,
+      #1E1B4B 0%,
+      #0F172A 45%,
+      #020617 100%
+    );
           text-align: center;
         }
 
-        .container {
+        .why .container {
           max-width: 1200px;
           margin: auto;
         }
 
-        h2 {
-          font-size: 36px;
-          color: #0B1C3D;
-          margin-bottom: 10px;
-        }
+        .why .container h2 {
+  font-size: 42px;
 
-        .subtitle {
-          color: #666;
-          max-width: 600px;
-          margin: 0 auto 50px;
-        }
+  font-weight: 800;
 
-        .grid {
+  color: #FFFFFF;
+
+  margin-bottom: 12px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+
+        .why .subtitle {
+  color: rgba(255,255,255,.78);
+
+  max-width: 700px;
+
+  margin: 0 auto 60px;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+        .why .grid {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 30px;
         }
 
         /* ✅ CARD DESIGN */
-        .card {
-          background: #F8FAFC;
-          padding: 30px 25px;
-          border-radius: 12px;
-          transition: all 0.3s ease;
-          text-align: center;
-          border: 1px solid transparent;
-        }
+        .why .card {
+  background: rgba(255,255,255,.06);
 
-        .card:hover {
-          transform: translateY(-8px);
-          background: white;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-          border-color: #eee;
-        }
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  padding: 32px 25px;
+
+  border-radius: 16px;
+
+  transition: all .35s ease;
+
+  text-align: center;
+
+  box-shadow: 0 12px 32px rgba(0,0,0,.18);
+}
+
+        .why .card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(251,191,36,.35);
+
+  box-shadow: 0 20px 42px rgba(0,0,0,.28);
+}
 
         /* ✅ ICON */
-        .icon {
-          font-size: 36px;
-          color: #F59E0B;
-          margin-bottom: 15px;
-        }
+        .why .icon {
+  font-size: 40px;
 
-        .card h3 {
-          font-size: 18px;
-          color: #0B1C3D;
-          margin-bottom: 10px;
-        }
+  color: #FBBF24;
 
-        .card p {
-          font-size: 14px;
-          color: #555;
-          line-height: 1.5;
-        }
+  margin-bottom: 18px;
+}
+
+        .why .card h3 {
+  font-size: 22px;
+
+  color: #FFFFFF;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+}
+
+        .why .card p {
+  font-size: 15px;
+
+  color: rgba(255,255,255,.72);
+
+  line-height: 1.6;
+}
 
         /* ✅ TABLET */
         @media (max-width: 1000px) {
-          .grid {
+          .why .grid {
             grid-template-columns: repeat(2, 1fr);
           }
         }
 
         /* ✅ MOBILE */
         @media (max-width: 600px) {
-          .why {
-            padding: 70px 20px;
-          }
 
-          h2 {
-            font-size: 28px;
-          }
+  .why {
+    padding: 70px 20px;
+  }
 
-          .grid {
-            grid-template-columns: 1fr;
-          }
+  .why .container h2 {
+    font-size: 28px;
+  }
 
-          .card {
-            padding: 25px 20px;
-          }
-        }
+  .why .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why .card {
+    padding: 25px 20px;
+  }
+
+}
       `}</style>
     </>
   );
