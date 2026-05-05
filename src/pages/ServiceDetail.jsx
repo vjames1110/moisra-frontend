@@ -2,250 +2,609 @@ import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import servicesData from "../data/servicesData";
 
-
 function ServiceDetail() {
+
   const { id } = useParams();
   const location = useLocation();
-  const [activeSection, setActiveSection] = useState(null);
 
-  const service = servicesData.find((s) => s.id === id);
+  const [activeSection, setActiveSection] =
+    useState(null);
+
+  const [selectedItem, setSelectedItem] =
+    useState(null);
+
+
+  const service =
+    servicesData.find(
+      (s) => s.id === id
+    );
+
 
   useEffect(() => {
-    if (location.state?.scrollTo) {
-      const el = document.getElementById(location.state.scrollTo);
-      if (el) {
-        const yOffset = -80;
-        const y =
-          el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-        window.scrollTo({ top: y, behavior: "smooth" });
+    if (
+      location.state?.scrollTo
+    ) {
+
+      const el =
+        document.getElementById(
+          location.state.scrollTo
+        );
+
+      if (el) {
+
+        const yOffset =
+          -90;
+
+        const y =
+          el.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+
+        window.scrollTo({
+          top: y,
+          behavior:
+            "smooth"
+        });
+
       }
+
     }
+
   }, [location]);
 
-  // 🔥 Track active section while scrolling
-  useEffect(() => {
-    const handleScroll = () => {
-      service?.sections.forEach((section) => {
-        const el = document.getElementById(section.id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            setActiveSection(section.id);
-          }
-        }
-      });
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  useEffect(() => {
+
+    const handleScroll =
+      () => {
+
+        service?.sections.forEach(
+          (
+            section
+          ) => {
+
+            const el =
+              document.getElementById(
+                section.id
+              );
+
+            if (
+              el
+            ) {
+
+              const rect =
+                el.getBoundingClientRect();
+
+              if (
+                rect.top <=
+                  150 &&
+                rect.bottom >=
+                  150
+              ) {
+
+                setActiveSection(
+                  section.id
+                );
+
+              }
+
+            }
+
+          }
+        );
+
+      };
+
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
+
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+
   }, [service]);
 
-  if (!service) return <h2>Not Found</h2>;
+
+  const openWhatsapp =
+    (
+      title
+    ) => {
+
+      const whatsappNumber =
+        "918889093777";
+
+      const text =
+        `Hi MOISRA Team, I want to know more about ${title}`;
+
+      const url =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+      window.open(
+        url,
+        "_blank"
+      );
+
+    };
+
+
+  if (!service)
+    return <h2>Not Found</h2>;
+
 
   return (
     <>
       <div className="service-page">
 
+
         {/* HERO */}
-        <section className="hero">
-          <h1>{service.title}</h1>
-          <p>{service.description}</p>
-        </section>
+        <section className="service-hero">
 
-        {/* OVERVIEW */}
-        <section className="overview">
-          <h2>Overview</h2>
+          <h1>
+            {
+              service.title
+            }
+          </h1>
+
           <p>
-            MOISRA delivers high-quality <b>{service.title}</b> services with
-            strong execution, compliance, and scalability.
+            {
+              service.description
+            }
           </p>
+
         </section>
 
-        {/* MAIN LAYOUT */}
-        <section className="main">
 
-          {/* 🔥 SIDE NAV */}
-          <div className="sidebar">
-            {service.sections.map((section) => (
-              <div
-                key={section.id}
-                className={`navItem ${
-                  activeSection === section.id ? "active" : ""
-                }`}
-                onClick={() => {
-                  const el = document.getElementById(section.id);
-                  el.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                {section.title}
-              </div>
-            ))}
+        {/* MAIN */}
+        <section className="service-main">
+
+
+          {/* SIDEBAR */}
+          <div className="service-sidebar">
+
+            {service.sections.map(
+              (
+                section
+              ) => (
+
+                <div
+                  key={
+                    section.id
+                  }
+                  className={`nav-item ${
+                    activeSection ===
+                    section.id
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={() => {
+
+                    const el =
+                      document.getElementById(
+                        section.id
+                      );
+
+                    el.scrollIntoView({
+                      behavior:
+                        "smooth"
+                    });
+
+                  }}
+                >
+                  {
+                    section.title
+                  }
+                </div>
+
+              )
+            )}
+
           </div>
+
 
           {/* CONTENT */}
-          <div className="content">
-            {service.sections.map((section) => (
-              <div key={section.id} id={section.id} className="block">
-                <h2>{section.title}</h2>
+          <div className="service-content">
 
-                <div className="tags">
-                  {section.items.map((item, i) => (
-                    <span key={i}>{item.name}</span>
-                  ))}
+            {service.sections.map(
+              (
+                section
+              ) => (
+
+                <div
+                  key={
+                    section.id
+                  }
+                  id={
+                    section.id
+                  }
+                  className="service-block"
+                >
+
+                  <h2>
+                    {
+                      section.title
+                    }
+                  </h2>
+
+
+                  <div className="tags">
+
+                    {section.items.map(
+                      (
+                        item,
+                        i
+                      ) => (
+
+                        <span
+                          key={i}
+                          onClick={() =>
+                            setSelectedItem(
+                              item
+                            )
+                          }
+                        >
+                          {
+                            item.name
+                          }
+                        </span>
+
+                      )
+                    )}
+
+                  </div>
+
                 </div>
-              </div>
-            ))}
+
+              )
+            )}
+
           </div>
 
         </section>
 
-        {/* CTA */}
-        <section className="cta">
-          <h2>Need Expert Consultation?</h2>
-          <p>Let's build your business with MOISRA</p>
-          <button onClick={() => alert("Enquiry Form Coming Soon")}>
-            Get Quote
-          </button>
-        </section>
+
+        {/* MODAL */}
+        {selectedItem && (
+
+          <div
+            className="modal-overlay"
+            onClick={() =>
+              setSelectedItem(
+                null
+              )
+            }
+          >
+
+            <div
+              className="modal-box"
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+            >
+
+              <button
+                className="close-btn"
+                onClick={() =>
+                  setSelectedItem(
+                    null
+                  )
+                }
+              >
+                ×
+              </button>
+
+
+              <img
+                src={
+                  selectedItem.image
+                }
+                alt=""
+              />
+
+
+              <h2>
+                {
+                  selectedItem.name
+                }
+              </h2>
+
+
+              <p>
+                {
+                  selectedItem.description
+                }
+              </p>
+
+
+              <button
+                className="whatsapp-btn"
+                onClick={() =>
+                  openWhatsapp(
+                    selectedItem.name
+                  )
+                }
+              >
+                Contact On WhatsApp
+              </button>
+
+            </div>
+
+          </div>
+
+        )}
 
       </div>
 
-      {/* STYLES */}
+
       <style jsx>{`
 
-        .service-page {
-          font-family: Arial, sans-serif;
-        }
+.service-page{
+  background:white;
+}
 
-        /* HERO */
-        .hero {
-          height: 300px;
-          background: linear-gradient(135deg, #0B1C3D, #1E3A8A);
-          color: white;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        }
 
-        .hero h1 {
-          font-size: 42px;
-        }
+/* HERO */
+.service-hero{
 
-        .overview {
-          padding: 60px 20px;
-          text-align: center;
-          background: #F8FAFC;
-        }
+  padding:140px 20px;
 
-        /* MAIN */
-        .main {
-          display: flex;
-          gap: 40px;
-          padding: 60px;
-        }
+  text-align:center;
 
-        /* SIDEBAR */
-        .sidebar {
-          width: 250px;
-          position: sticky;
-          top: 100px;
-          height: fit-content;
-        }
+  background:
+  linear-gradient(
+    135deg,
+    #1E1B4B,
+    #0F172A
+  );
 
-        .navItem {
-          padding: 10px;
-          cursor: pointer;
-          border-left: 3px solid transparent;
-          color: #555;
-          transition: 0.3s;
-        }
+  color:white;
+}
 
-        .navItem:hover {
-          color: #0B1C3D;
-        }
 
-        .navItem.active {
-          color: #0B1C3D;
-          border-left: 3px solid #F59E0B;
-          font-weight: bold;
-        }
 
-        /* CONTENT */
-        .content {
-          flex: 1;
-        }
+/* MAIN */
+.service-main{
 
-        .block {
-          margin-bottom: 60px;
-        }
+  max-width:1400px;
 
-        .block h2 {
-          margin-bottom: 15px;
-          color: #1E3A8A;
-        }
+  margin:auto;
 
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-        }
+  padding:100px 40px;
 
-        .tags span {
-          background: white;
-          padding: 10px 14px;
-          border-radius: 20px;
-          font-size: 13px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-          transition: 0.3s;
-        }
+  display:flex;
 
-        .tags span:hover {
-          transform: translateY(-3px);
-        }
+  gap:50px;
+}
 
-        /* CTA */
-        .cta {
-          padding: 80px;
-          text-align: center;
-          background: #0B1C3D;
-          color: white;
-        }
 
-        .cta button {
-          margin-top: 20px;
-          padding: 12px 25px;
-          background: #F59E0B;
-          border: none;
-          cursor: pointer;
-          border-radius: 6px;
-          font-weight: bold;
-        }
 
-        /* MOBILE */
-        @media(max-width: 900px) {
-          .main {
-            flex-direction: column;
-          }
+/* SIDEBAR */
+.service-sidebar{
 
-          .sidebar {
-            width: 100%;
-            display: flex;
-            overflow-x: auto;
-          }
+  width:280px;
 
-          .navItem {
-            white-space: nowrap;
-            border: none;
-            border-bottom: 2px solid transparent;
-          }
+  position:sticky;
 
-          .navItem.active {
-            border-bottom: 2px solid #F59E0B;
-          }
-        }
+  top:100px;
+
+  height:fit-content;
+}
+
+
+.nav-item{
+
+  padding:16px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  margin-bottom:10px;
+
+  transition:.3s;
+}
+
+
+.nav-item.active{
+
+  background:#0F172A;
+
+  color:white;
+}
+
+
+
+/* CONTENT */
+.service-content{
+  flex:1;
+}
+
+
+.service-block{
+  margin-bottom:70px;
+}
+
+
+.tags{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+}
+
+
+.tags span{
+
+  padding:14px 20px;
+
+  border-radius:14px;
+
+  background:white;
+
+  border:1px solid #ddd;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+
+.tags span:hover{
+
+  transform:translateY(-5px);
+
+  border-color:#F59E0B;
+}
+
+
+
+/* MODAL */
+.modal-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+  rgba(0,0,0,.55);
+
+  backdrop-filter:
+  blur(8px);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:999;
+}
+
+
+.modal-box{
+
+  width:500px;
+
+  max-width:90%;
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:35px;
+
+  position:relative;
+
+  animation:
+  popup .35s ease;
+}
+
+
+@keyframes popup{
+
+  from{
+    transform:
+    scale(.8);
+    opacity:0;
+  }
+
+  to{
+    transform:
+    scale(1);
+    opacity:1;
+  }
+
+}
+
+
+.close-btn{
+
+  position:absolute;
+
+  right:18px;
+
+  top:18px;
+
+  border:none;
+
+  background:none;
+
+  font-size:28px;
+
+  cursor:pointer;
+}
+
+
+.modal-box img{
+
+  width:100%;
+
+  height:250px;
+
+  object-fit:cover;
+
+  border-radius:14px;
+
+  margin-bottom:20px;
+}
+
+
+.modal-box h2{
+
+  margin-bottom:15px;
+
+  color:#0F172A;
+}
+
+
+.modal-box p{
+
+  color:#475569;
+
+  line-height:1.7;
+}
+
+
+.whatsapp-btn{
+
+  margin-top:25px;
+
+  width:100%;
+
+  border:none;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  background:#F59E0B;
+
+  color:white;
+
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+
+@media(max-width:900px){
+
+  .service-main{
+    flex-direction:column;
+  }
+
+  .service-sidebar{
+    width:100%;
+    position:static;
+  }
+
+}
 
       `}</style>
     </>

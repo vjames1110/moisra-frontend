@@ -20,11 +20,32 @@ const servicesData = [
                 id: "development",
                 title: "Development",
                 items: [
-                    { name: "Web Development", slug: "web-development" },
-                    { name: "App Development", slug: "app-development" },
-                    { name: "Software Development", slug: "software-development" },
-                    { name: "ERP Development", slug: "erp-development" },
-                    { name: "HR & Admin IT Solutions", slug: "hr-admin-it-solutions" }
+                    {
+                        name: "Web Development",
+                        slug: "web-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981805/web-development_cvhktg.jpg",
+                        description: "Custom Websites, enterprise portals, Ecommerce websites and more"
+                    },
+                    {
+                        name: "App Development",
+                        slug: "app-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981805/app-development_tzxrzg.jpg",
+                        description: "Build powerful, user-friendly mobile apps tailored to your business goals-designed for performance, scalability and exceptional user experience across Android and IOS platform."
+                    },
+                    {
+                        name: "Software Development",
+                        slug: "software-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981806/software-development_fwuwos.jpg",
+                        description: "Custom software solutions, engineered to streamline operations, boost productivity, and scale your business."
+                    },
+                    { name: "ERP Development", 
+                        slug: "erp-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981805/erp-development_rdkxhf.jpg",
+                        description: "Smart Enterprise Resource Planning solutions that unify your operations, automate workflows, and provide real-time business insights-helping you manage, smarter, faster, and more efficiently." },
+                    { name: "HR & Admin IT Solutions", 
+                        slug: "hr-admin-it-solutions",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981806/hr-it_mcnfpx.jpg",
+                        description: "Advanced HR & IT solutions that simplify workforce management, automate daily operations, and enhance organizational efficiency-enabling smarter people management and seamless business control." }
                 ]
             },
             {

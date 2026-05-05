@@ -2,6 +2,28 @@ import { useEffect } from "react";
 
 function Hero() {
 
+  // Open Whatsapp
+
+  // ✅ WhatsApp Enquiry
+const openWhatsApp = () => {
+
+  const whatsappNumber = "918889093777";
+
+  const text =
+`Hi MOISRA Team,
+
+I want to know more about your consultancy services.
+
+Please share details.
+
+Thanks.`;
+
+  const whatsappURL =
+    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+  window.open(whatsappURL, "_blank");
+};
+
   // ✅ Scroll to services section
   const scrollToServices = () => {
     const element = document.getElementById("services");
@@ -26,9 +48,9 @@ function Hero() {
           <div className="buttons">
             <button
               className="primary"
-              onClick={() => alert("Enquiry Form Coming Soon")}
+              onClick={openWhatsApp}
             >
-              Get Quote
+              Enquire Now
             </button>
 
             <button className="secondary" onClick={scrollToServices}>
