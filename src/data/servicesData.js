@@ -116,18 +116,23 @@ const servicesData = [
                 id: "3d-design",
                 title: "3D Designing",
                 items: [
-                    { name: "AutoCAD", 
+                    {
+                        name: "AutoCAD",
                         slug: "autocad",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980789/autocad_vshbc1.png",
-                    description: "Professional AutoCAD solutions for precise drafting, 2D/3D design, and technical documentation—turning concepts into accurate, industry-ready engineering designs." },
-                    { name: "BIM360", 
+                        description: "Professional AutoCAD solutions for precise drafting, 2D/3D design, and technical documentation—turning concepts into accurate, industry-ready engineering designs."
+                    },
+                    {
+                        name: "BIM360",
                         slug: "bim360",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980861/bim-360_t6edi7.png",
-                        description: "Advanced Autodesk BIM 360 solutions for collaborative design, document management, and real-time project coordination—connecting teams, reducing errors, and delivering smarter construction outcomes." },
-                    { name: "Staad", 
+                        description: "Advanced Autodesk BIM 360 solutions for collaborative design, document management, and real-time project coordination—connecting teams, reducing errors, and delivering smarter construction outcomes."
+                    },
+                    {
+                        name: "Staad",
                         slug: "staad",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980861/staad_pmasj0.png",
-                        description: "Expert STAAD.Pro solutions for structural analysis, design optimization, and engineering accuracy—helping you build safer, stronger, and more reliable infrastructure projects."    
+                        description: "Expert STAAD.Pro solutions for structural analysis, design optimization, and engineering accuracy—helping you build safer, stronger, and more reliable infrastructure projects."
                     },
                 ]
             },
@@ -135,14 +140,18 @@ const servicesData = [
                 id: "performance-analytics",
                 title: "Performance & Analytics",
                 items: [
-                    { name: "Data Analytics", 
+                    {
+                        name: "Data Analytics",
                         slug: "data-analytics",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980917/data-analytics_aiitaz.png",
-                        description: "Powerful Data Analysis solutions that transform raw data into actionable insights—helping businesses make smarter decisions, optimize performance, and drive sustainable growth." },
-                    { name: "Business Intelligence", 
+                        description: "Powerful Data Analysis solutions that transform raw data into actionable insights—helping businesses make smarter decisions, optimize performance, and drive sustainable growth."
+                    },
+                    {
+                        name: "Business Intelligence",
                         slug: "business-intelligence",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980916/business-analytics_xvwh6b.png",
-                        description: "Strategic Business Analysis solutions that turn business challenges into growth opportunities—optimizing processes, improving decisions, and driving measurable results." },
+                        description: "Strategic Business Analysis solutions that turn business challenges into growth opportunities—optimizing processes, improving decisions, and driving measurable results."
+                    },
                 ]
             }
         ]
@@ -159,9 +168,24 @@ const servicesData = [
                 id: "work-manpower",
                 title: "Manpower Supply",
                 items: [
-                    { name: "Skilled Labour", slug: "skilled-labour" },
-                    { name: "Unskilled Labour", slug: "unskilled-labour" },
-                    { name: "Contract Staffing", slug: "contract-staffing" },
+                    {
+                        name: "Skilled Labour",
+                        slug: "skilled-labour",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053015/skilled-labour_ujifxq.png",
+                        description: "Reliable skilled workforce solutions providing trained professionals across multiple industries—ensuring quality workmanship, operational efficiency, and timely project execution with confidence."
+                    },
+                    {
+                        name: "Unskilled Labour",
+                        slug: "unskilled-labour",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053017/un-skilled-labour_ygrzhi.png",
+                        description: "Dependable manpower solutions with readily available workforce support for operational, construction, and industrial needs—ensuring smooth execution, flexibility, and productivity at every stage."
+                    },
+                    {
+                        name: "Contract Staffing",
+                        slug: "contract-staffing",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053014/contract-staffing_le8in1.png",
+                        description: "Flexible contract staffing solutions that connect your business with the right talent, right when you need it—reducing hiring time, optimizing costs, and powering projects with skilled professionals."
+                    },
                     { name: "Permanent Staffing", slug: "permanent-staffing" },
                 ]
             },
@@ -169,23 +193,77 @@ const servicesData = [
                 id: "work-training",
                 title: "Training Programs",
                 items: [
-                    { name: "Technical Training", slug: "technical-training" },
-                    { name: "Safety Training", slug: "safety-training" },
-                    { name: "Industrial Training", slug: "industrial-training" },
-                    { name: "Executive Development", slug: "executive-development" },
-                    { name: "Soft Skills Training", slug: "soft-skills-training" },
-                    { name: "HR & Administration Training", slug: "hr-administration-training" },
-                    { name: "Leadership Development", slug: "leadership-development" },
-                    { name: "Project Management Training", slug: "project-management-training" }
+                    {
+                        name: "Technical Training",
+                        slug: "technical-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053030/technical-training_fkhr7u.png",
+                        description: "Industry-focused technical training programs designed to build practical skills, enhance expertise, and prepare professionals for real-world challenges in today’s evolving technology landscape."
+                    },
+                    {
+                        name: "Safety Training",
+                        slug: "safety-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053030/safety-training_d1x8nv.png",
+                        description: "Professional safety training programs designed to build a strong safety culture, reduce workplace risks, and ensure compliance—empowering teams to work confidently, responsibly, and safely."
+                    },
+                    {
+                        name: "Industrial Training",
+                        slug: "industrial-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053029/industrial-training_fm3dpi.png",
+                        description: "Hands-on industrial training programs designed to bridge the gap between theory and real-world application—building practical expertise, industry readiness, and career-focused technical skills."
+                    },
+                    {
+                        name: "Executive Development",
+                        slug: "executive-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053028/executive-development_bcqeco.png",
+                        description: "Strategic executive development programs designed to strengthen leadership, enhance decision-making, and build high-impact professionals—empowering leaders to drive innovation, performance, and business success."
+                    },
+                    {
+                        name: "Soft Skills Training",
+                        slug: "soft-skills-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053030/softskill-training_equnsu.png",
+                        description: "Professional soft skills training designed to enhance communication, leadership, teamwork, and confidence—helping individuals grow personally, perform professionally, and lead with impact."
+                    },
+                    {
+                        name: "HR & Administration Training",
+                        slug: "hr-administration-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053029/hr-administration-training_fwjre6.png",
+                        description: "Professional soft skills training designed to enhance communication, leadership, teamwork, and confidence—helping individuals grow personally, perform professionally, and lead with impact."
+                    },
+                    {
+                        name: "Leadership Development",
+                        slug: "leadership-development",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053029/leadership-development_zlflv4.png",
+                        description: "Transformative leadership development programs designed to build vision, confidence, and strategic thinking—empowering professionals to inspire teams, drive change, and achieve lasting success."
+                    },
+                    {
+                        name: "Project Management Training",
+                        slug: "project-management-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053029/project-management-training_f5kypa.png",
+                        description: "Industry-focused project management training designed to master planning, execution, resource management, and risk control—building the skills to deliver projects on time, within scope, and with confidence."
+                    }
                 ]
             },
             {
                 id: "job-placement",
                 title: "Job Placement",
                 items: [
-                    { name: "Placement", slug: "placement" },
-                    { name: "Campus Recruitment", slug: "campus-recruitment" },
-                    { name: "Resume Building", slug: "resume-building" },
+                    {
+                        name: "Placement",
+                        slug: "placement",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778052999/placement_khuoy1.png",
+                        description: "Career-focused job placement solutions that connect talent with the right opportunities—bridging skills with industry needs and helping professionals build successful, future-ready careers."
+                    },
+                    {
+                        name: "Campus Recruitment",
+                        slug: "campus-recruitment",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778053000/campus-recruitment_ew885n.png",
+                        description: "Smart campus recruitment solutions that connect organizations with emerging talent—streamlining hiring, identifying high-potential candidates, and building tomorrow’s workforce today."
+                    },
+                    {
+                        name: "Resume Building",
+                        slug: "resume-building",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1778052999/resume-building_ma1uuf.png",
+                        descripiton: "Professional resume-building services designed to showcase your strengths, highlight your achievements, and create a powerful first impression—helping you stand out in today’s competitive job market." },
                 ]
             },
         ]
