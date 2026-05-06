@@ -38,51 +38,111 @@ const servicesData = [
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981806/software-development_fwuwos.jpg",
                         description: "Custom software solutions, engineered to streamline operations, boost productivity, and scale your business."
                     },
-                    { name: "ERP Development", 
+                    {
+                        name: "ERP Development",
                         slug: "erp-development",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981805/erp-development_rdkxhf.jpg",
-                        description: "Smart Enterprise Resource Planning solutions that unify your operations, automate workflows, and provide real-time business insights-helping you manage, smarter, faster, and more efficiently." },
-                    { name: "HR & Admin IT Solutions", 
+                        description: "Smart Enterprise Resource Planning solutions that unify your operations, automate workflows, and provide real-time business insights-helping you manage, smarter, faster, and more efficiently."
+                    },
+                    {
+                        name: "HR & Admin IT Solutions",
                         slug: "hr-admin-it-solutions",
                         image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777981806/hr-it_mcnfpx.jpg",
-                        description: "Advanced HR & IT solutions that simplify workforce management, automate daily operations, and enhance organizational efficiency-enabling smarter people management and seamless business control." }
+                        description: "Advanced HR & IT solutions that simplify workforce management, automate daily operations, and enhance organizational efficiency-enabling smarter people management and seamless business control."
+                    }
                 ]
             },
             {
                 id: "erp-solutions",
                 title: "ERP Solutions",
                 items: [
-                    { name: "SAP", slug: "sap" },
-                    { name: "Tally ERP", slug: "tally-erp" },
-                    { name: "ERP", slug: "erp" },
-                    { name: "ERP Training", slug: "erp-training" }
+                    {
+                        name: "SAP",
+                        slug: "sap",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980846/sap_jbhtqi.png",
+                        description: "Expert SAP solutions for seamless business integration, process automation, and data-driven decision-making—empowering enterprises with smarter, faster, and scalable operations."
+                    },
+                    {
+                        name: "Tally ERP",
+                        slug: "tally-erp",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980846/tallyerp_ybaz51.png",
+                        description: "Efficient Tally.ERP solutions for accounting, inventory, taxation, and business management—ensuring accuracy, compliance, and complete financial control with ease."
+                    },
+                    {
+                        name: "ERP",
+                        slug: "erp",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980845/erp_hjrgyl.png",
+                        description: "Integrated Enterprise Resource Planning solutions that connect finance, operations, inventory, and workflows in one powerful system—driving efficiency, visibility, and smarter business growth."
+                    },
+                    {
+                        name: "ERP Training",
+                        slug: "erp-training",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980846/erp-training_plmtfq.png",
+                        description: "Hands-on Enterprise Resource Planning training designed to build real-world expertise in business processes, system operations, and industry-ready skills for career growth."
+                    }
                 ]
             },
             {
                 id: "planning-strategy",
                 title: "Planning & Strategy",
                 items: [
-                    { name: "Primavera", slug: "primavera" },
-                    { name: "MSP", slug: "msp" },
-                    { name: "PROCORE", slug: "procore" },
-                    { name: "Weighbridge Calibration", slug: "weighbridge-calibration" },
+                    {
+                        name: "Primavera",
+                        slug: "primavera",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980927/primavera_xpxxmx.png",
+                        description: "Professional Oracle Primavera solutions for project planning, scheduling, resource management, and cost control—helping you deliver complex projects on time and within budget."
+                    },
+                    {
+                        name: "MSP",
+                        slug: "msp",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980926/msp_dqf2q3.png",
+                        description: "Expert Microsoft Project solutions for project planning, scheduling, resource allocation, and progress tracking—ensuring organized execution, timely delivery, and better project control."
+                    },
+                    {
+                        name: "PROCORE",
+                        slug: "procore",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980927/procore_mno2wk.png",
+                        description: "Smart Procore solutions for construction planning, collaboration, document control, and real-time project tracking—keeping teams connected and projects moving efficiently from start to finish."
+                    },
+                    {
+                        name: "Weighbridge Calibration",
+                        slug: "weighbridge-calibration",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980928/weighbridge-callibration_zuoa0l.png",
+                        description: "Precision weighbridge calibration services ensuring accurate measurements, regulatory compliance, and reliable performance—minimizing errors, preventing losses, and keeping your operations running with confidence."
+                    },
                 ]
             },
             {
                 id: "3d-design",
                 title: "3D Designing",
                 items: [
-                    { name: "AutoCAD", slug: "autocad" },
-                    { name: "BIM360", slug: "bim360" },
-                    { name: "Staad", slug: "staad" },
+                    { name: "AutoCAD", 
+                        slug: "autocad",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980789/autocad_vshbc1.png",
+                    description: "Professional AutoCAD solutions for precise drafting, 2D/3D design, and technical documentation—turning concepts into accurate, industry-ready engineering designs." },
+                    { name: "BIM360", 
+                        slug: "bim360",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980861/bim-360_t6edi7.png",
+                        description: "Advanced Autodesk BIM 360 solutions for collaborative design, document management, and real-time project coordination—connecting teams, reducing errors, and delivering smarter construction outcomes." },
+                    { name: "Staad", 
+                        slug: "staad",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980861/staad_pmasj0.png",
+                        description: "Expert STAAD.Pro solutions for structural analysis, design optimization, and engineering accuracy—helping you build safer, stronger, and more reliable infrastructure projects."    
+                    },
                 ]
             },
             {
                 id: "performance-analytics",
                 title: "Performance & Analytics",
                 items: [
-                    { name: "Data Analytics", slug: "data-analytics" },
-                    { name: "Business Intelligence", slug: "business-intelligence" },
+                    { name: "Data Analytics", 
+                        slug: "data-analytics",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980917/data-analytics_aiitaz.png",
+                        description: "Powerful Data Analysis solutions that transform raw data into actionable insights—helping businesses make smarter decisions, optimize performance, and drive sustainable growth." },
+                    { name: "Business Intelligence", 
+                        slug: "business-intelligence",
+                        image: "https://res.cloudinary.com/dm6vrdbw5/image/upload/v1777980916/business-analytics_xvwh6b.png",
+                        description: "Strategic Business Analysis solutions that turn business challenges into growth opportunities—optimizing processes, improving decisions, and driving measurable results." },
                 ]
             }
         ]
